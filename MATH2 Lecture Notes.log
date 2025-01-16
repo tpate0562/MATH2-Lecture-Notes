@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.21)  16 JAN 2025 08:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.21)  16 JAN 2025 09:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -325,6 +325,14 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count292
 \@lastruleclass=\count293
 \@thisrulewidth=\dimen277
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks38
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/circuitikz/circuitikz.sty
 Package: circuitikz 2024/02/09{} The CircuiTikz circuit drawing package version 1.6.7
  (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
@@ -382,7 +390,7 @@ Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 Package: amsopn 2022/04/08 v2.04 operator names
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks38
+\@emptytoks=\toks39
 \ex@=\dimen302
 )) (/usr/local/texlive/2024/texmf-dist/tex/latex/bbding/bbding.sty
 Package: bbding 1999/04/15 v1.01 Dingbats symbols
@@ -427,21 +435,21 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \dotsspace@=\muskip16
 \c@parentequation=\count306
 \dspbrk@lvl=\count307
-\tag@help=\toks39
+\tag@help=\toks40
 \row@=\count308
 \column@=\count309
 \maxfields@=\count310
-\andhelp@=\toks40
+\andhelp@=\toks41
 \eqnshift@=\dimen305
 \alignsep@=\dimen306
 \tagshift@=\dimen307
 \tagwidth@=\dimen308
 \totwidth@=\dimen309
 \lineht@=\dimen310
-\@envbody=\toks41
+\@envbody=\toks42
 \multlinegap=\skip58
 \multlinetaggap=\skip59
-\mathdisplay@stack=\toks42
+\mathdisplay@stack=\toks43
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -572,7 +580,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen320
 \Gm@layouthoffset=\dimen321
 \Gm@layoutvoffset=\dimen322
-\Gm@dimlist=\toks43
+\Gm@dimlist=\toks44
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count326
@@ -580,24 +588,24 @@ File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 ) (./MATH2 Lecture Notes.aux)
 \openout1 = `"MATH2 Lecture Notes.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
  (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count327
@@ -605,12 +613,12 @@ LaTeX Font Info:    ... okay on input line 32.
 \scratchbox=\box69
 \nofMPsegments=\count328
 \nofMParguments=\count329
-\everyMPshowfont=\toks44
+\everyMPshowfont=\toks45
 \MPscratchCnt=\count330
 \MPscratchDim=\dimen324
 \MPnumerator=\count331
 \makeMPintoPDFobject=\count332
-\everyMPtoPDFconversion=\toks45
+\everyMPtoPDFconversion=\toks46
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -619,21 +627,21 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
- on input line 32.
+ on input line 33.
 
-Package hyperref Info: Link coloring OFF on input line 32.
+Package hyperref Info: Link coloring OFF on input line 33.
 (./MATH2 Lecture Notes.out) (./MATH2 Lecture Notes.out)
 \@outlinefile=\write4
 \openout4 = `"MATH2 Lecture Notes.out"'.
 
-LaTeX Info: Redefining \celsius on input line 32.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 32.
+LaTeX Info: Redefining \celsius on input line 33.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 33.
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 32.
-Package gensymb Info: Using \Omega for \ohm on input line 32.
+LaTeX Info: Redefining \ohm on input line 33.
+Package gensymb Info: Using \Omega for \ohm on input line 33.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -671,7 +679,14 @@ Package gensymb Warning: Not defining \micro.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(./MATH2 Lecture Notes.toc)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 35.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (./MATH2 Lecture Notes.toc)
 \tf@toc=\write5
 \openout5 = `"MATH2 Lecture Notes.toc"'.
 
@@ -688,27 +703,27 @@ Missing character: There is no , in font nullfont!
 Missing character: There is no - in font nullfont!
 Missing character: There is no > in font nullfont!
 Missing character: There is no ] in font nullfont!
-[2] [3] [4] (./MATH2 Lecture Notes.aux)
+[2] [3] [4] [5] (./MATH2 Lecture Notes.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `"MATH2 Lecture Notes".out' has not changed.
-(rerunfilecheck)             Checksum: 0EE397B47D7E0B21F1E9038160E87D92;642.
+(rerunfilecheck)             Checksum: 8BDC004BA59C5F1DF2AAC83050905E0E;1613.
  ) 
 Here is how much of TeX's memory you used:
- 48977 strings out of 474116
- 1276417 string characters out of 5743681
- 2007814 words of memory out of 5000000
- 70750 multiletter control sequences out of 15000+600000
- 564589 words of font info for 59 fonts, out of 8000000 for 9000
+ 49108 strings out of 474116
+ 1278397 string characters out of 5743681
+ 2010316 words of memory out of 5000000
+ 70858 multiletter control sequences out of 15000+600000
+ 567477 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,15n,107p,804b,943s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on "MATH2 Lecture Notes.pdf" (4 pages, 138904 bytes).
+ 102i,15n,107p,804b,945s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "MATH2 Lecture Notes.pdf" (5 pages, 172207 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
- 18 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 172 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
+ 25 named destinations out of 1000 (max. 500000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
