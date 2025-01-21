@@ -115,8 +115,22 @@ $f(x) = \begin{cases}
     y(x_0) = y_0  & \text{Initial Condition}
     \end{cases}$\\ Let R be a rectangular region in the xy-plane defined by $a\leq x \leq b, c \leq y \leq d $, that contains the point $(x_0, y_0)$ in its interior. \\[0.1in] If f(x,y) and $\partial f \partial y$ are continuous on $R$, then there exists an interval I centered at $x_o$, and on this interval $I$ there exists a unique solution $y(x)$ for this IVP\\
 \textbf{Key Questions:}\\ Does every IVP have at least one solution?\\ If an IVP has a solution is it the only solution?
-\subsection{Separable Variables}
-\subsection{Homogenous Equations}
+
+\textbf{Meaning of a solution existing "on an Interval"}
+The initial value problem
+\\$\begin{cases}
+    \frac{dy}{dx} =1+y^2
+    \\ y(0)=0
+\end{cases}$ has a unique solution. In fact, we can easily verify that $y=\tan x$ satisfies this IVP
+\\ However note that there are some inervals on which $y=\tan x$ cannot be a solution for this IVP, such as (-2,2),
+where the function is discontinuous at $\pm \frac{\pi}{2}$ but can be used for (-1,1) since it is continuous at all points within the interval
+\subsection{Separable Variables (Separable Equations)}
+\textbf{Definition: }A differential equation that can be written in the form $\frac{dy}{dx}= \frac{g(x)}{h(y)}$ is said to be separable (or have separable variables).
+\\\textbf{Example: } $\frac{dy}{dx}= \frac{g(x)}{h(y)} \\[0.05in]h(y) dy = g(x) dx \\[0.05in] \int{h(y)}{dy} = \int g(x) dx$ 
+\\\textbf{Example: } $dx+e^{3x}dy=0$ \\ $e^{3x} dy = -dx$ \\ $dy=-\frac{dx}{e^{3x}}\rightarrow dy=-{e^{-3x}}{dx} \rightarrow \int dy=\int -{e^{-3x}}{dx} \rightarrow y=\frac{1}{3}e^{-3x}+C$ where C is an arbitrary constant
+\\\textbf{Substitution: } $\frac{dy}{dx} = F(ax+bc+c)$ where $b\neq 0$ use the substitution: $u=ax+by+c \Rightarrow \frac{du}{dx} = a+b\frac{dy}{dx} = \frac{1}{b}\left[\frac{du}{dx}-a\right]$
+\\Example: $\frac{dy}{dx} = \tan^2(x+y)$ let $u=x+y \rightarrow \frac{dy}{dx}=\frac{du}{dx}-1 \rightarrow \frac{du}{dx}-1=\tan^2 u \rightarrow \frac{du}{dx} = \sec ^2 u \\ \int \cos^2 u \; du = \int dx \\ 2(x+y)+\sin2(x+y) = 4x+C \rightarrow 2y-2x+\sin2(x+y)$
+\subsection{Homogenous Equations} 
 \subsection{Exact Equations}
 \subsection{Preliminary Theory}
 
@@ -151,5 +165,14 @@ Yes there is a unique solution, $\frac{\partial f}{\partial y} = 3$\\
 Determine the region R for which the DE would have a unique solution through a point $(x_0, y_0)$ in the region
 $\frac{dy}{dx} = \sqrt{xy}$ \\ Where on $\mathbb{R}^2$ is $\frac{\partial f}{\partial y}$ continuous? $\frac{\partial f}{\partial y} = \frac{1}{2}(xy)^{-1/2} * \frac{\partial}{\partial y} (xy) = \frac{x}{2\sqrt{xy}}$
 \\ \textbf{DIY}
-\\ $\frac{dy}{dx}-y=x$
+\\ $\frac{dy}{dx}-y=x$ 
+\subsection{}
+\textbf{Solve: } $ydx=(2+3x)dy$ \\ $\frac{dy}{y} = \frac{dx}{2+3x}$ \\ $\int \frac{dy}{y} = \int \frac{dx}{2+3x}$ \\ $\ln |y| = \frac{ \ln |2+3x|}{3} + C$  \\ $e^{\ln |y|} = e^{\frac{ \ln |2+3x|}{3} + C_1}$ 
+\\ $=  e^{\frac{ \ln |2+3x|}{3}} \cdot e^{C_1}$ \\ $|y| = e^{C_1} \cdot {\ln |2+3x| ^ {\frac{1}{3}}}$ \\ $|y| = \left|e^{C_1}\right| \cdot \left|(2+3x)^{^\frac{1}{3}}\right|$\\ $|y| = \left|e^{C_1} \cdot |(2+3x)^{^\frac{1}{3}}\right|$ \\ $y = \pm C(2+3x)^{^\frac{1}{3}} \qquad x \neq -\frac{2}{3}$
+\subsection{}
+$\frac{dy}{dx} = e^xe^{5y} \\ e^{-5y}dy = \frac{e^x}{dx} \\ \int e^{-5y}dy = \int e^x dx \\ -\frac{1}{5}e^{-5y} = e^x + C_1 \\ 
+e^{-5y}=-5e^x-5C_1 \\ -5y=\ln(-5e^x-5C_1) \\ y= -\frac{1}{5}\ln(C-5e^x)$
+\subsection{}
+$y'=2y-y^2 \\ \frac{dy}{dx} = y(2-y) \rightarrow \int \frac{dy}{y(2-y)} = \int dx \rightarrow \int \left(\frac{0.5}{y} + \frac{0.5}{2-y}\right) dy=\int dx \\ \frac{1}{2}\ln|y| - \frac{1}{2}\ln|2-y| = x+C_1 \\ \ln|y| - \ln |2-y| = 2x+2C_1
+\\ \ln \left|\frac{y}{2-y}\right| = 2x+2C_1 \Rightarrow \left|\frac{y}{2-y}\right| = e^{2x}e^{2C_1} \rightarrow \frac{y}{2-y} = Ce^{2x} \rightarrow y=CE^{2x}(2-y) \\ y=2Ce^{2x}-Ce^{2x}y \rightarrow (1+Ce^{2x})y=2Ce^{2x} \\ \boxed{y=\frac{2Ce^{2x}}{1+Ce^{2x}}} \rightarrow \frac{2C}{e^{-2x}+C}$
 \end{document}

@@ -3,9 +3,12 @@
 \contentsline {subsection}{\numberline {1.2}Some Mathematical Models}{2}{subsection.1.2}%
 \contentsline {section}{\numberline {2}First-Order Differential Equations}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Preliminary Theory}{4}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Separable Variables}{4}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Homogenous Equations}{4}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Exact Equations}{4}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Preliminary Theory}{4}{subsection.2.5}%
-\contentsline {section}{\numberline {3}Example Problems with Solutions}{5}{section.3}%
-\contentsline {subsection}{\numberline {3.1}}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {2.2}Separable Variables (Separable Equations)}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Homogenous Equations}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Exact Equations}{5}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Preliminary Theory}{5}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Example Problems with Solutions}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}}{6}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}}{7}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}}{7}{subsection.3.4}%
