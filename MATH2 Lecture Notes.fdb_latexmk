@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1737481502.88417 "/Users/tejaspatel/Desktop/LaTeX Projects/MATH2 Lecture Notes/MATH2 Lecture Notes.tex" "MATH2 Lecture Notes.pdf" "MATH2 Lecture Notes" 1737481504.46824 0
-  "/Users/tejaspatel/Desktop/LaTeX Projects/MATH2 Lecture Notes/MATH2 Lecture Notes.tex" 1737481502.52928 9408 ea0961af7f55de792d9e40abd77f5c51 ""
+["pdflatex"] 1737652250.97108 "/Users/tejaspatel/Desktop/LaTeX Projects/MATH2 Lecture Notes/MATH2 Lecture Notes.tex" "MATH2 Lecture Notes.pdf" "MATH2 Lecture Notes" 1737652252.56496 0
+  "/Users/tejaspatel/Desktop/LaTeX Projects/MATH2 Lecture Notes/MATH2 Lecture Notes.tex" 1737652250.75115 12347 dc09674f1045dc724741bad9282c0cdf ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -242,10 +242,10 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1729555295.99067 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1729555229 8221428 380a9ae05887af09f5a76ce7a01b05d8 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "MATH2 Lecture Notes.aux" 1737481504.35146 1851 fb6e594d50cc796288e17636c0cf3a6e "pdflatex"
-  "MATH2 Lecture Notes.out" 1737481504.35245 1885 029dc6922abb6d9e8778365556e1020e "pdflatex"
-  "MATH2 Lecture Notes.tex" 1737481502.52928 9408 ea0961af7f55de792d9e40abd77f5c51 ""
-  "MATH2 Lecture Notes.toc" 1737481504.35307 1115 c079a35e9b16ff2895b62d10c3db76c8 "pdflatex"
+  "MATH2 Lecture Notes.aux" 1737652252.45142 3152 1c7df4a97dd7665d9de34022758ced0a "pdflatex"
+  "MATH2 Lecture Notes.out" 1737652252.45239 3099 e10e3b7cadb040bcc9925a59ab553255 "pdflatex"
+  "MATH2 Lecture Notes.tex" 1737652250.75115 12347 dc09674f1045dc724741bad9282c0cdf ""
+  "MATH2 Lecture Notes.toc" 1737652252.45267 2003 8f5b3627d7b19266c36b4dac394ca659 "pdflatex"
   (generated)
   "MATH2 Lecture Notes.aux"
   "MATH2 Lecture Notes.log"

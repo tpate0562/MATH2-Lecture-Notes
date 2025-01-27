@@ -109,12 +109,12 @@ The rate at which the reaaction takes place $\propto$ Product of the remaining c
 \subsection{Preliminary Theory}
 Example DE: $y'=3y \Rightarrow \boxed{y=Ce^{3x}}$ the general solution where C is an arbitrary constant
 \\[0.05in]Add initial condition $y(0) = 5$ plug in x=0 to $5=Ce^{3*0}, 5=C*1, C=5 \Leftarrow$ Initial Value Problem
-\\$y=5e^{3x}$ is the general solution for the Initial Value Problem\\\textbf{Theorem}
+\\$y=5e^{3x}$ is the general solution for the Initial Value Problem\\\subsubsection{\textbf{Theorem}}
 $f(x) = \begin{cases}
     \frac{dy}{dx} = f(x,y) & \text{Differential Equation}\\
     y(x_0) = y_0  & \text{Initial Condition}
-    \end{cases}$\\ Let R be a rectangular region in the xy-plane defined by $a\leq x \leq b, c \leq y \leq d $, that contains the point $(x_0, y_0)$ in its interior. \\[0.1in] If f(x,y) and $\partial f \partial y$ are continuous on $R$, then there exists an interval I centered at $x_o$, and on this interval $I$ there exists a unique solution $y(x)$ for this IVP\\
-\textbf{Key Questions:}\\ Does every IVP have at least one solution?\\ If an IVP has a solution is it the only solution?
+    \end{cases}$\\ Let R be a rectangular region in the xy-plane defined by $a\leq x \leq b, c \leq y \leq d $, that contains the point $(x_0, y_0)$ in its interior. \\[0.1in] If f(x,y) and $\frac{\partial f}{\partial y}$ are continuous on $R$, then there exists an interval I centered at $x_o$, and on this interval $I$ there exists a unique solution $y(x)$ for this IVP\\
+\subsubsection{\textbf{Key Questions:}}Does every IVP have at least one solution?\\ If an IVP has a solution is it the only solution?
 
 \textbf{Meaning of a solution existing "on an Interval"}
 The initial value problem
@@ -125,14 +125,41 @@ The initial value problem
 \\ However note that there are some inervals on which $y=\tan x$ cannot be a solution for this IVP, such as (-2,2),
 where the function is discontinuous at $\pm \frac{\pi}{2}$ but can be used for (-1,1) since it is continuous at all points within the interval
 \subsection{Separable Variables (Separable Equations)}
-\textbf{Definition: }A differential equation that can be written in the form $\frac{dy}{dx}= \frac{g(x)}{h(y)}$ is said to be separable (or have separable variables).
+\subsubsection{\textbf{Definition: }}A differential equation that can be written in the form $\frac{dy}{dx}= \frac{g(x)}{h(y)}$ is said to be separable (or have separable variables).
 \\\textbf{Example: } $\frac{dy}{dx}= \frac{g(x)}{h(y)} \\[0.05in]h(y) dy = g(x) dx \\[0.05in] \int{h(y)}{dy} = \int g(x) dx$ 
 \\\textbf{Example: } $dx+e^{3x}dy=0$ \\ $e^{3x} dy = -dx$ \\ $dy=-\frac{dx}{e^{3x}}\rightarrow dy=-{e^{-3x}}{dx} \rightarrow \int dy=\int -{e^{-3x}}{dx} \rightarrow y=\frac{1}{3}e^{-3x}+C$ where C is an arbitrary constant
-\\\textbf{Substitution: } $\frac{dy}{dx} = F(ax+bc+c)$ where $b\neq 0$ use the substitution: $u=ax+by+c \Rightarrow \frac{du}{dx} = a+b\frac{dy}{dx} = \frac{1}{b}\left[\frac{du}{dx}-a\right]$
+\subsubsection{Substitution} $\frac{dy}{dx} = F(ax+bc+c)$ where $b\neq 0$ use the substitution: $u=ax+by+c \Rightarrow \frac{du}{dx} = a+b\frac{dy}{dx} = \frac{1}{b}\left[\frac{du}{dx}-a\right]$
 \\Example: $\frac{dy}{dx} = \tan^2(x+y)$ let $u=x+y \rightarrow \frac{dy}{dx}=\frac{du}{dx}-1 \rightarrow \frac{du}{dx}-1=\tan^2 u \rightarrow \frac{du}{dx} = \sec ^2 u \\ \int \cos^2 u \; du = \int dx \\ 2(x+y)+\sin2(x+y) = 4x+C \rightarrow 2y-2x+\sin2(x+y)$
-\subsection{Homogenous Equations} 
+\\ \textbf{Solve:}
+$\frac{dy}{dx} = (y+3)^2$ By inspection $y=-3$ is a solution. This is the only solution because $f(x,y)=(x+3)^2$ is continuous on $\mathbb{R}^2$ and $\frac{\partial f}{\partial x}$ is continuous on$ \mathbb{R}$ so it is the only solution
+Why solving by separation is not possible
+$\int (y+3)^-2 dy=\int dx \rightarrow (y+3)^-2/-1=x+C_1 \rightarrow \frac{1}{y+3}=-x-C_1 \rightarrow y+3 = \frac{1}{c-x} \rightarrow y=-3+\frac{1}{c-x}
+\\y(0)=-3\rightarrow 0=\frac{1}{c}$ where there is no real c that solves that equation, making this not possible
+\subsection{Homogeneous Equations} 
+\textbf{What do we do if the DE is not separable?}
+\subsubsection{Definition} A function $f(x,y)$ is said to be \textbf{homogeneous of degree} $n$ if, for $x, y,$ and$ t $where $f(x,y)$ and $f(tx,ty)$ are defined: \\$$f(tx,ty)=t^nf(x,y)$$
+\subsubsection{Example} Determine wheteher each function is homogeneous: \\
+a: $ f(x,y)=x^3-7x^2y+4y^3 \rightarrow f(tx,ty)=(tx^3)-7(tx)^2(ty)+4(ty)^3\\t^3x^3-7t^3x^2y+4t^3y^3\\t^3(x^3-7x^2y-4y^3)=t^3f(x,y)$
+\\How to tell quickly wheteher $f(x,y)$ is homogeneous:
+\\Each term must have the same combined degree
+\\Example: $x^3-7x^2y+4y^3$ is D3, $x^2+y^2-4x$ is not, $\sqrt{x^5+4y^5}$ is with D 2.5, $\frac{3y}{x}-2$ is D0
+\subsubsection{Differential Equation form}
+$M(x,y)dx+N(x,y)dy=0$ is called a homogeneous differential equation if the functions $M$ and $N$ are both homogeneous of the same degree
+\\If $f(x,y)$ is homogeneous of degree $n$ then $f(x,y)$ can be written as:
+\\$f(x,y)=f(x\times 1, x \times \frac{y}{x})=x^nf(1, \frac{y}{x})$
+\\or $f(x,y)=y^nf(\frac{x}{y},1)$
+\subsubsection{Substitution} to solve a homogeneous DE make the substitution: $y=ux \;\; (u=\frac{y}{x})$ or$ x=vy \; \; (v=\frac{x}{y})$
+\subsubsection{Example}
+$(y^2+xy)dx+x^2dy=0 \rightarrow y=ux \rightarrow dy=(udx+xdu) \\ (u^2x^2+ux^2)dx+x^2(udx+xdU)=0\\u^2x^2dx+ux^2dx+ux^2dx+x^3du=0 \\ ux^2(u+2)dx+x^3du=0\\\int \frac{1}{u(u+2)}du=-\int \frac{1}{x}dx \\$ Partial Fraction Decomposition: $\frac{1}{u(u+2)}=\frac{A}{u}+\frac{B}{u+2} \rightarrow A=\frac{1}{2}, B=-\frac{1}{2}$ Back to solving \\ $\int \left[\frac{0.5}{u}-\frac{0.5}{u+2}\right]=-\int \frac{1}{x} dx \\ 0.5\ln|u|-1/2 \ln |u+2|=-\ln |x|+C_1 \\ \ln \left|\frac{u}{u+2}\right|=2C_1-2\ln|x| \\ \left|\frac{u}{u+2}\right|=e^{2C_1}\cdot e^{-2\ln|x|} = e^{2C_1}\cdot |x^{-2}| \Rightarrow \left|\frac{u}{u+2}\right| = \left|e^{2C_1}\cdot x^{-2}\right| \Rightarrow \left|\frac{u}{u+2} = \frac{C}{x^2}\right| \\ ux^2=X(u+2) \Rightarrow ux^2=Cu+2c \rightarrow ux^2-Cu=2C \\ u(x^2-c)=2C \Rightarrow u= \frac{2C}{x^2-C} \Rightarrow \frac{y}{x} = \frac{2Cx}{x^2-C}, \; x \neq 0$
 \subsection{Exact Equations}
 \subsection{Preliminary Theory}
+
+
+
+
+
+
+
 
 
 
@@ -175,4 +202,9 @@ e^{-5y}=-5e^x-5C_1 \\ -5y=\ln(-5e^x-5C_1) \\ y= -\frac{1}{5}\ln(C-5e^x)$
 \subsection{}
 $y'=2y-y^2 \\ \frac{dy}{dx} = y(2-y) \rightarrow \int \frac{dy}{y(2-y)} = \int dx \rightarrow \int \left(\frac{0.5}{y} + \frac{0.5}{2-y}\right) dy=\int dx \\ \frac{1}{2}\ln|y| - \frac{1}{2}\ln|2-y| = x+C_1 \\ \ln|y| - \ln |2-y| = 2x+2C_1
 \\ \ln \left|\frac{y}{2-y}\right| = 2x+2C_1 \Rightarrow \left|\frac{y}{2-y}\right| = e^{2x}e^{2C_1} \rightarrow \frac{y}{2-y} = Ce^{2x} \rightarrow y=CE^{2x}(2-y) \\ y=2Ce^{2x}-Ce^{2x}y \rightarrow (1+Ce^{2x})y=2Ce^{2x} \\ \boxed{y=\frac{2Ce^{2x}}{1+Ce^{2x}}} \rightarrow \frac{2C}{e^{-2x}+C}$
+\subsection{}
+$(x-y)dx+xdy=0$
+\\Substitution $y=ux \Rightarrow dy=udx+xdu$
+\\$(x-ux)dx+x(udx+xdu)=0 \\ xdx-uxdx+uxdx+x^2du=0 \\ xdx+x^2du=0 \\ \int du= -\int \frac{1}{x}dx \Rightarrow u=-\ln |x|+C \\ u=\frac{y}{x} \\ \frac{y}{x}=C-\ln|x| \\ y=Cx-x\ln |x|$
+
 \end{document}
