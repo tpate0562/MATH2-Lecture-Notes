@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.21)  30 JAN 2025 09:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.21)  18 FEB 2025 09:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -686,13 +686,13 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./MATH2 Lecture Notes.toc)
+) (./MATH2 Lecture Notes.toc [1
+
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@toc=\write5
 \openout5 = `"MATH2 Lecture Notes.toc"'.
 
- [1
-
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+ [2]
 Missing character: There is no [ in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -703,22 +703,22 @@ Missing character: There is no , in font nullfont!
 Missing character: There is no - in font nullfont!
 Missing character: There is no > in font nullfont!
 Missing character: There is no ] in font nullfont!
-[2]
+[3]
 Underfull \hbox (badness 10000) in paragraph at lines 110--112
 
  []
 
-[3]
+[4]
 Underfull \hbox (badness 10000) in paragraph at lines 113--117
 
  []
 
-[4]
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 140--140
 
  []
 
-[5]
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 171--180
 
  []
@@ -728,27 +728,27 @@ Overfull \hbox (2.16362pt too wide) in paragraph at lines 171--180
 [] [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 e[]f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 e[]y \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 e[]f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 dx$ [] 
  []
 
-[6] [7] [8] [9] [10] (./MATH2 Lecture Notes.aux)
+[7] [8] [9] [10] [11] [12] [13] (./MATH2 Lecture Notes.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `"MATH2 Lecture Notes".out' has not changed.
-(rerunfilecheck)             Checksum: 9DE9AC3B84B30B351684B78B5AD26626;4691.
+(rerunfilecheck)             Checksum: 1019D37A0FEC4FE82DB1087985462390;6773.
  ) 
 Here is how much of TeX's memory you used:
- 49170 strings out of 474116
- 1279333 string characters out of 5743681
- 2012323 words of memory out of 5000000
- 70882 multiletter control sequences out of 15000+600000
+ 49198 strings out of 474116
+ 1279682 string characters out of 5743681
+ 2014326 words of memory out of 5000000
+ 70892 multiletter control sequences out of 15000+600000
  567477 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,15n,107p,980b,945s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "MATH2 Lecture Notes.pdf" (10 pages, 227458 bytes).
+Output written on "MATH2 Lecture Notes.pdf" (13 pages, 240384 bytes).
 PDF statistics:
- 343 PDF objects out of 1000 (max. 8388607)
- 294 compressed objects within 3 object streams
- 63 named destinations out of 1000 (max. 500000)
- 285 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 416 PDF objects out of 1000 (max. 8388607)
+ 363 compressed objects within 4 object streams
+ 81 named destinations out of 1000 (max. 500000)
+ 365 words of extra memory for PDF output out of 10000 (max. 10000000)
 

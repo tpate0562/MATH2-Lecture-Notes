@@ -213,6 +213,36 @@ Show that $y=x^3$ and $x^2+3y^2=4$ are orthogonal at their points of intersectio
 \\ $y=x^3 \Rightarrow \frac{dy}{dx}=3x^2 \rightarrow =3$ at $x=1$ and 3 at $x=-1$
 \\$2x+6y\frac{dy}{dx}=0 \rightarrow \frac{dy}{dx}=-\frac{x}{3y} = \frac{-1}{3}$ at both $x=1$ and $x=-1$ meaning it is orthogonal
 \subsubsection{Definition} When all the curves of one family of curves intersect orthogonally all the curves of another family, then the families are said to be orthogonal trajectories of each other
+\subsection{Applications of Linear Equations}
+$\frac{dN}{dt}=kN\rightarrow N=Ce^{kt}$ for bacterial growth rate. Nothing else here, just an applications section
+\subsection{Applications of Nonlinear Equations}
+\subsubsection*{Logistic Model of Population Growth}
+1: End Behaviour (Steady State Solution)
+as $t\rightarrow \infty P(t)=\frac{aP_0}{bP_0+(a-bP_0)e^{-at}} \rightarrow P(t)=\frac{aP_0}{bP_0}=\frac{a}{b}$
+2: Concavity Analysis (Point of Inflection)
+$\frac{dP}{dt}=P(a-bP)\\\frac{d^2P}{dt^2}=\frac{dP}{dt}(a-2bP)=P(a-bP)(a-2bP)=0$ \\ For inflection point $a-2bP=0\rightarrow a=2bP \rightarrow P=\frac{a}{2b} \rightarrow P=\frac{N}{2}$
+3 cases of initial conditions
+$\begin{cases}
+    0<P_0<\frac{a}{2b} & \text{Hits inflection point while rising to CC}\\
+    \frac{a}{2b}<P_0<\frac{a}{b} & \text{Population grows at a decreasing rate to CC}\\
+    P_0>\frac{a}{b} & \text{Population falls to the carying capacity}
+\end{cases}$
+\section{Linear DE of Higher Order}
+\subsection{Preliminary Theory}
+Initial Value Problem $a_n(x)y^{(n)}+a_{n-1}(x)y^{(n-1)}+...+a_1(x)y'+a_0(x)y=g(x)$
+\\Initial Conditions $y(x_0)=y_0...y^{(n-1)}(x_0)=y_0^{(n-1)}$
+\\\textbf{Theorem} Let easch $a_j(x)$ be continuous on an interval I and let $a_n(x)\neq 0$ for every... CONTINUE LATER
+\\Boundary-Value Problem for 2nd order Linear DE $a_2(x)y''+a_1(x)y'+a_0(x)y=g(x)\\  \qquad y(a)=y_0 \qquad y(b)=y_1$
+\\Example: $y''+16y=0 \quad y(0)=0 \quad y(\pi/2) = 0
+\\y=\sin 4x$ and $y=\cos 4x$ are solutions so $y(x)=c_1\cos 4x+ c_2 \sin 4x
+\\y(0) = c_1\cos(0)+c_2\sin(0) =c_1= 0
+\\y(\pi/2) = c_1\cos(2\pi)+c_2\sin(2\pi) =c_1= 0
+$ so $y(x)=c_2\sin 4x$ is a solution
+
+\subsection{Constructing a Second Solutiuon from a Known Solution}
+\subsection{Homogeneous Linear Equations w/ Constant Coefficients}
+\subsection{Undetermined Coefficients - Superposition Approach}
+\subsection{Variation of Parameters}
 
 
 
@@ -264,4 +294,33 @@ $(x-y)dx+xdy=0$
 \subsection{}
 $(x^3+y^2)dx=3xy^2dy=0$ is conservative, so find $f(x,y)$ that satisfies $M=f_x, N=f_y$
 \\$\int (x^3+y^3)dx = \frac{x^4}{4}+xy^3+g(y)$ and $\int xy^2dy = {xy^3} + g'(y) \\ f(x,y)=\frac{x^4}{4}+xy^3=C$
+\subsection{}
+Big Mouth John brings a juicy rumor to a town of 5000. Assume logistic growth. After 5 days 200 people have heard it. How many people will have heard it after 7 days?
+$\frac{dP}{dt}=kP(5000-P) = P(5000k-kP) \rightarrow a=5000k \\ P(t)=\frac{aP_0}{bP_0+(a-bP_0)e^{-at}} \\ P(t)=\frac{5000k\cdot 1}{k \cdot 1 + (5000k-k\cdot 1)e^{-5000kt}}=\frac{5000k}{k+4999ke^{-5000kt}} = \frac{5000}{1+4999e^{-5000kt}}$
+\\[0.05in]From here use $P(5)=200$ to determine $k$ 
+\\[0.05in]$P(t)=\frac{5000}{1+4999e^{-5000kt}} \Rightarrow 200=\frac{5000}{1+4999e{-25000k}}
+\\1+4999e^{-25000k}=25
+\\e^{-25000k}=\frac{24}{4999} \\ k=-\frac{1}{25000}\ln\left(\frac{25}{4999}\right) = 2.13557\text{E}-4
+$\\Now plug in for P(7)=1303.3603 people
+\subsection{}
+Compound C is formed as a reaction of A and B $A+B\rightarrow C$. The resulting reaction is such that
+\begin{enumerate}
+    \item For each gram of $B$, 3 grams of $A$ are used
+    \item Initially 40g of $A$ 25g of B
+    \item 10 mins after start, 20g of $C$ is formed
+    \item Reaction rate is proportional to amounts of $A$ and $B$
+\end{enumerate}
+(a) Determine the amount of $C$ at time $t$
+\\(b) How much $C$ is formed in 15 minutes
+\\(c) How much $C$ formes at $t=\infty$
+\\$\frac{dx}{dt}=k_1(40-0.75x)(25-0.25x) = \frac{k_1}{160}(160-3x)(100-x) = k(160-3x)(100-x)
+\\\frac{dx}{dt}=k(160-3x)(100-x)
+=\int \frac{1}{(160-3x)(100-x)}dx=\int k dt
+\\=\int \frac{3/140}{160-3x}-\frac{1/140}{100-x}dx = kt+C_1
+\\=\frac{1}{140}\ln \left|\frac{100-x}{160-3x}\right|=kt+C_1
+=\frac{100-x}{160-3x}=c_2e^{140kt} \Rightarrow c_2=\frac{5}{8}$ by $x(0)=0
+\\=\frac{100-x}{160-3x}=\frac{5}{8}e^{140kt} \quad x(10)=20 \rightarrow k =\frac{1}{1400}\ln \frac{32}{25}
+\\x(t)=\frac{100(e^{140kt}-1)}{\frac{15}{8}e^{140kt}-1}$ where $k =\frac{1}{1400}\ln \frac{32}{25}
+\\x(15)=26.12705$ grams of $C$
+\\$\lim_{t\rightarrow\infty}\frac{100(e^{140kt}-1)}{\frac{15}{8}e^{140kt}-1} = \frac{160}{3}$ grams of $C$
 \end{document}
