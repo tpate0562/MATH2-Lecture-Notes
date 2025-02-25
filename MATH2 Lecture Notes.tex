@@ -240,7 +240,37 @@ Initial Value Problem $a_n(x)y^{(n)}+a_{n-1}(x)y^{(n-1)}+...+a_1(x)y'+a_0(x)y=g(
 $ so $y(x)=c_2\sin 4x$ is a solution
 
 \subsection{Constructing a Second Solutiuon from a Known Solution}
+
+\subsubsection*{General Formula} Given $a_2(x)y''+a_1(x)y'+a_0(x)y=0$ and $a_2(x) \neq 0$ and $y_1(x) \neq 0$ is a solution of this DE, find $y_2(x)$
+\\Divide by $a_2(x)$: $y''+\cancelto{P(x)}{\frac{a_1(x)}{a_2(x)}}y'+\cancelto{Q(x)}{\frac{a_0(x)}{a_2(x)}}y=0
+\\y''+Py'+Qy=0, \quad y_2=uy_1 \rightarrow y_2'=uy'1+u'y_1 \rightarrow y_2''=uy_1''+2u'y_1'+u''y_1$ 
+\\Plug it all in: $u''y_1+2u'y_1'+uy_1''+Py'y_1+Puy_1'+Quy_1=0
+\\u''y_1+u'(2y_1'+Py_1)+\cancelto{0}{u(y_1''+Py_1'+Qy_1)}=0
+\\u''y_1+u'(2y_1'+Py_1)=0$ Let w=u' and w'=u''
+\\$y_1w'+(2y_1'+Py_1)w=0
+\\ w'+\frac{2y_1'+Py_1}{y_1}w=0 \quad \mu = e^{\int \frac{2y_1'}{y_1}+P dx}
+\\w=c_1y_1^{-2}e^{-\int P dx}=u' = {e^{-\int P dx}}{y_1^2}$
+\\\subsubsection*{General Reduction of Order Formula} \boxed{y_2=y_1\int \frac{e^{-\int P dx}}{{y_1^2}} dx}
+
+
 \subsection{Homogeneous Linear Equations w/ Constant Coefficients}
+In the DE $a_2(x)y''+a_1(x)y'+a_0(x)y=0$, take \\
+$a_2(x)=a,\qquad a_1(x)=b,\qquad a_0(x)=c$
+\\ so we have a 2ns-order Homogeneous Linear DE with \textit{constant coefficients}
+$$ay''+by'+cy$$
+\\What does a typical solution look like?
+\\$\begin{cases}
+    y=e^{mx}
+    \\y'=me^{mx}
+    \\y''=m^2e^{mx}
+\end{cases}$ so $am^2e^{mx}+bme^{mx}+ce^{mx}=0=e^{mx}(am^2+bc+c)$
+\subsubsection*{Auxilliary Equation for a DE} $am^2+bm+c=0$
+\subsubsection*{Three Scenarios for the Auxilliary Equation}
+$\begin{cases}
+    \text{If}\;\; b^2-4ac>0 & \text{two real roots}\;\; y=c_1e^{m_1x}+c_2e^{m_2x}
+    \\ \text{If}\;\; b^2-4ac=0 & \text{one real root}\;\; y=c_1e^{mx}+c_2xe^{mx}
+    \\\text{If}\;\; b^2-4ac<0 & \text{No real roots, 2 distinct complex roots}
+\end{cases}$
 \subsection{Undetermined Coefficients - Superposition Approach}
 \subsection{Variation of Parameters}
 
@@ -323,4 +353,15 @@ Compound C is formed as a reaction of A and B $A+B\rightarrow C$. The resulting 
 \\x(t)=\frac{100(e^{140kt}-1)}{\frac{15}{8}e^{140kt}-1}$ where $k =\frac{1}{1400}\ln \frac{32}{25}
 \\x(15)=26.12705$ grams of $C$
 \\$\lim_{t\rightarrow\infty}\frac{100(e^{140kt}-1)}{\frac{15}{8}e^{140kt}-1} = \frac{160}{3}$ grams of $C$
+\subsection{Find the auxilliary equation for the DE}
+$3y''+5y'-2y=0
+\\3m^2+5m-2=0$
+\subsection*{Solve}
+$3m^2+5m-2=0$
+\\Solutions to quadratic formula $m_1=\frac{1}{3}\;\;m_2=-2$
+\\Solution to DE $y=c_1e^{\frac{x}{3}}+c_2e^{-2x}$
+\subsection*{Solve}
+$m^2+4m+4=0
+\\(m+2)^2=0, \;\;\; m=-2
+\\y=c_1e^{-2x}+c_2xe^{-2x}$
 \end{document}
