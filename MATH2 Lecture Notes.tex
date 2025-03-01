@@ -18,7 +18,10 @@
 \usepackage{cancel}
 \usepackage{gensymb}
 \usepackage[margin = 1.2in]{geometry}
-
+\newcommand{\RA}{\Rightarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\dydx}{\frac{dy}{dx}}
+\newcommand{\dxdy}{\frac{dx}{dy}}
 \newcommand{\midlabelline}[3]{
    \node (midlabel) at ($ (#1)!.5!(#2) $) {#3};
    \draw[latex-] (#1) --  (midlabel);
@@ -250,7 +253,7 @@ $ so $y(x)=c_2\sin 4x$ is a solution
 \\$y_1w'+(2y_1'+Py_1)w=0
 \\ w'+\frac{2y_1'+Py_1}{y_1}w=0 \quad \mu = e^{\int \frac{2y_1'}{y_1}+P dx}
 \\w=c_1y_1^{-2}e^{-\int P dx}=u' = {e^{-\int P dx}}{y_1^2}$
-\\\subsubsection*{General Reduction of Order Formula} \boxed{y_2=y_1\int \frac{e^{-\int P dx}}{{y_1^2}} dx}
+\\\subsubsection{General Reduction of Order Formula} \boxed{y_2=y_1\int \frac{e^{-\int P dx}}{{y_1^2}} dx}
 
 
 \subsection{Homogeneous Linear Equations w/ Constant Coefficients}
@@ -264,15 +267,41 @@ $$ay''+by'+cy$$
     \\y'=me^{mx}
     \\y''=m^2e^{mx}
 \end{cases}$ so $am^2e^{mx}+bme^{mx}+ce^{mx}=0=e^{mx}(am^2+bc+c)$
-\subsubsection*{Auxilliary Equation for a DE} $am^2+bm+c=0$
-\subsubsection*{Three Scenarios for the Auxilliary Equation}
+\subsubsection{Auxilliary Equation for a DE} $am^2+bm+c=0$
+\subsubsection{Three Scenarios for the Auxilliary Equation}
 $\begin{cases}
     \text{If}\;\; b^2-4ac>0 & \text{two real roots}\;\; y=c_1e^{m_1x}+c_2e^{m_2x}
     \\ \text{If}\;\; b^2-4ac=0 & \text{one real root}\;\; y=c_1e^{mx}+c_2xe^{mx}
     \\\text{If}\;\; b^2-4ac<0 & \text{No real roots, 2 distinct complex roots}
 \end{cases}$
 \subsection{Undetermined Coefficients - Superposition Approach}
+$\bullet$ Nonhomogeneous Linear DE with constant coefficients:
+$$ay''+by'+cy=g(x)$$
+\textbf{Recall from Section 4.1}: The general solution is: $$y(x)=y_c(x)+y_p(x)$$ where $y_c(x)$ is the general solution $ay''+by'+cy=0$\\ $y_p(x)$ is one particular colution of $ay''+by'+cy=g(x)$
+\\\textbf{The big question:} How do we find $y_p(x)$?
+\subsubsection{Trial Particular Solutions} 
+\begin{tabular}{|c|c|}
+    g(x) & Form of $y_p$
+    \\constant & $A$
+    \\ $2x-7$ & $Ax+B$
+    \\$-x^2+3$& $Ax^2+Bx+C$
+    \\ $\sin kx$ or $\cos kx$ & $A \cos kx + B \sin kx$
+    \\ $e^{kx}$ & $Ae^{kx}$
+    \\$(2x-7)e^{kx}$ & $(Ax+B)e^{kx}$
+    \\$x^2e^{kx}$ & $(Ax^2+Bx+C)e^{kx}$
+    \\$ e^{kx} \cos lx$ $or e^{kx} \sin lx$ & $e^{kx}(A\cos lx + B \sin lx)$
+    \\ $5x^2 \sin kx$ & $(Ax^2+Bx+C)\cos kx + (Dx^2+Ex+F)\sin kx$
+    \\ $xe^{kx} \cos lx$ & $(Ax+B)e^{kx}\cos lx + (Cx+D)e^{kx}\sin lx$
+\end{tabular}
 \subsection{Variation of Parameters}
+
+
+
+
+
+
+
+
 
 
 
@@ -308,13 +337,13 @@ Determine the region R for which the DE would have a unique solution through a p
 $\frac{dy}{dx} = \sqrt{xy}$ \\ Where on $\mathbb{R}^2$ is $\frac{\partial f}{\partial y}$ continuous? $\frac{\partial f}{\partial y} = \frac{1}{2}(xy)^{-1/2} * \frac{\partial}{\partial y} (xy) = \frac{x}{2\sqrt{xy}}$
 \\ \textbf{DIY}
 \\ $\frac{dy}{dx}-y=x$ 
-\subsection{}
+\subsection{$ydx=(2+3x)dy$}
 \textbf{Solve: } $ydx=(2+3x)dy$ \\ $\frac{dy}{y} = \frac{dx}{2+3x}$ \\ $\int \frac{dy}{y} = \int \frac{dx}{2+3x}$ \\ $\ln |y| = \frac{ \ln |2+3x|}{3} + C$  \\ $e^{\ln |y|} = e^{\frac{ \ln |2+3x|}{3} + C_1}$ 
 \\ $=  e^{\frac{ \ln |2+3x|}{3}} \cdot e^{C_1}$ \\ $|y| = e^{C_1} \cdot {\ln |2+3x| ^ {\frac{1}{3}}}$ \\ $|y| = \left|e^{C_1}\right| \cdot \left|(2+3x)^{^\frac{1}{3}}\right|$\\ $|y| = \left|e^{C_1} \cdot |(2+3x)^{^\frac{1}{3}}\right|$ \\ $y = \pm C(2+3x)^{^\frac{1}{3}} \qquad x \neq -\frac{2}{3}$
-\subsection{}
+\subsection{$\frac{dy}{dx} = e^xe^{5y}$}
 $\frac{dy}{dx} = e^xe^{5y} \\ e^{-5y}dy = \frac{e^x}{dx} \\ \int e^{-5y}dy = \int e^x dx \\ -\frac{1}{5}e^{-5y} = e^x + C_1 \\ 
 e^{-5y}=-5e^x-5C_1 \\ -5y=\ln(-5e^x-5C_1) \\ y= -\frac{1}{5}\ln(C-5e^x)$
-\subsection{}
+\subsection{$y'=2y-y^2$}
 $y'=2y-y^2 \\ \frac{dy}{dx} = y(2-y) \rightarrow \int \frac{dy}{y(2-y)} = \int dx \rightarrow \int \left(\frac{0.5}{y} + \frac{0.5}{2-y}\right) dy=\int dx \\ \frac{1}{2}\ln|y| - \frac{1}{2}\ln|2-y| = x+C_1 \\ \ln|y| - \ln |2-y| = 2x+2C_1
 \\ \ln \left|\frac{y}{2-y}\right| = 2x+2C_1 \Rightarrow \left|\frac{y}{2-y}\right| = e^{2x}e^{2C_1} \rightarrow \frac{y}{2-y} = Ce^{2x} \rightarrow y=CE^{2x}(2-y) \\ y=2Ce^{2x}-Ce^{2x}y \rightarrow (1+Ce^{2x})y=2Ce^{2x} \\ \boxed{y=\frac{2Ce^{2x}}{1+Ce^{2x}}} \rightarrow \frac{2C}{e^{-2x}+C}$
 \subsection{}
@@ -364,4 +393,21 @@ $3m^2+5m-2=0$
 $m^2+4m+4=0
 \\(m+2)^2=0, \;\;\; m=-2
 \\y=c_1e^{-2x}+c_2xe^{-2x}$
+\subsection{$y''-2y'-3y=-6x^2+x-2$}
+\textbf{Find} $y_c$\\
+$y''-2y'-3y=0$ gets an auxilliary equation
+\\$m^2-2m-3=0 \Rightarrow (m+1)(m-3)=0 \Rightarrow m_2=-1,\;\; m_2=-3\\y_2=c_1e^{-x}+c_2e^{3x}$
+\\\textbf{Find} $y_p$\\
+$y_p(x)=Ax^2+Bx+C \\ y_p'(x)=2Ax+B \\ y_p''(x)=2A$
+\\Plug it in\\ $2A-2(2Ax+B)-3(Ax^2+Bx+C)=-6x^2+x-2
+\\\Rightarrow -3Ax^2+(-4A-3B)x+(2A-2B-3C)=-6x^2+x-2 \\-3A=-6\quad-4A-3B=1\quad 2A-2B-3C=-2
+\\A=2, \quad B=-3, \quad C=4$ \textbf{making the equation $y_p(x)=2x^2-3x+4$}
+\\Solution to the nonhomogeneous equation $y=y_c+y_p=c_1e^{-x}+c_2e^{3x}+2x^2-3x+4$
+\subsection{$y''+2y'+y=3\sin 2x$}
+$m^2+2m+1=0 \Rightarrow m-=1, \quad m=-1$
+\\$y_c=c_1e^{-x}+c_2xe^{-x}$
+\\$y_p=\cos 2x + B \sin 2x\\y_p'(x)=-2A\sin 2x+ 2x\cos 2x \\ y_p'' = -4A\cos 2x - 4B \sin 2x$
+\\$y_p''+2y_p'+y_p=(-3A+4B)\cos 2x + (-4A-3B)\sin 2x = 3\sin 2x \Rightarrow A=-\frac{12}{25} \quad B=-\frac{9}{25} \\ \Rightarrow y_p=-\frac{12}{25}\cos 2x-\frac{9}{25} \sin 2x
+\\y=c_1e^{-x}+c_2xe^{-x}-\frac{12}{25}\cos 2x-\frac{9}{25} \sin 2x$
+
 \end{document}
