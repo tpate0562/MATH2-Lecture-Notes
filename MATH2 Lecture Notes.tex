@@ -294,11 +294,48 @@ $$ay''+by'+cy=g(x)$$
     \\ $xe^{kx} \cos lx$ & $(Ax+B)e^{kx}\cos lx + (Cx+D)e^{kx}\sin lx$
 \end{tabular}
 \subsection{Variation of Parameters}
-
-
-
-
-
+Given: $a_2(x)y''+a_1(x)y'+a_0(x)y=g(x)\\\Rightarrow y''+P(x)y'+Q(x)y=f(x)$
+\\Goal: Find $y_p$
+\subsubsection{Idea:} Let $y_1,\;y_2$ be the two linearly independent solutions of $$y''+P(x)y'+Q(x)y=0$$ Then we will look for $y_p$ of the form: $$y_p=u_1(x)y_1(x)+u_2(x)y_2(x)$$
+\subsubsection{Derivation:} $y_p'=u_1'y_1+u_2'y_2+u_1y_1'+u_2y_2'$ by product rule \\[0.1in] Assume $u_1'y_1+u_2'y_2=0 \rightarrow y_p'=u_1y_1'+u_2y_2'$
+\\[0.1in]$y_p''=u_1y_1''+u_2y_2''+u_1'y_1'+u_2'+y_2'$ then substitute into  $y''+Py'+Qy=f$
+\\[0.1in] $\cancelto{0}{u_1(y_1''+Py_1'+Qy_1)}+\cancelto{0}{u_2(y_2''+Py_2'+Qy_2)}+u_1'y_1'+u_2'+y_2'=f$
+\\[0.1in]$\begin{cases}
+    u_1'y_1+u_2'y_2=0
+    \\u_1'y_1'+u_2'+y_2'=f
+\end{cases} \rightarrow y_p=u_1y_1+u_2y_2$ 
+\subsubsection{Example}$y''+9y=\cos 3x$
+\\[0.1in]$m^2+9=0 \rightarrow m=\pm 3i \rightarrow y_c=C_1 \cos 3x + C_2 \sin 3x $
+\\[0.1in]$y_p=u_1y_1+u_2y_2$ where $u_1'=\frac{\begin{bmatrix}0&\sin 3x\\\cos 3x&2\cos 3x\end{bmatrix}}{\begin{bmatrix}\cos 3x&\sin 3x\\3\sin 3x & 3\cos 3x \end{bmatrix}}= -\frac{1}{3}\sin 3x \cos 3x = -\frac{1}{6}\sin 6x\\
+u_1=\int -\frac{1}{6}\sin 6x dx = \frac{\cos 6x}{36}$\\
+$u_2'=\frac{\begin{bmatrix}\cos 3x & 0 \\ -3\sin 3x & \cos 3x\end{bmatrix}}{\begin{bmatrix}\cos 3x&\sin 3x\\3\sin 3x & 3\cos 3x \end{bmatrix}} = \frac{\cos^2 3x}{3}=\int \frac{\cos^2 3x}{3} dx=\int \frac{1+ \cos 6x}{6} dx = \frac{x}{6}+\frac{\sin 6x}{36}$
+\\$y_p=\frac{\cos 6x }{36}\cos 3x + \frac{x}{6}+\frac{\sin 6x}{36}\sin 3x = \frac{1}{36}\cos 3x + \frac{x}{6}\sin 3x$
+\\$y_p=C_1 \cos 3x + C_2 \sin 3x+\frac{1}{36}\cos 3x + \frac{x}{6}\sin 3x =$ \boxed{C_1\cos 3x + C_2 \sin 3x + \frac{1}{6}x \sin 3x}\\
+\textbf{Initial Value Problem} $y(0)=1,\quad y'(0)=0$
+\\$C_1\cos 3x + \cancelto{0}{C_2 \sin 3x + \frac{1}{6}x \sin 3x} \rightarrow C_1 \cos(0)=1 \rightarrow C_1=1$
+\\$y'(0) \rightarrow \cancelto{0}{-3\sin 3x} +3C_2\cos 3x+\frac{1}{6}x+3\cos 3x + \cancelto{0}{\frac{1}{6}\sin 3x}\\
+3C_2\cos 3x+\frac{1}{6}x+3\cos 3x=0 \rightarrow 3C_2=0$ so $C_2=0$
+\\\boxed{y(x) = \cos 3x + \frac{1}{6}x \sin 3x}
+\pagebreak
+\section{Applications of 2nd-Order DE}
+\subsection{Simple Harmonic Motion}
+$\frac{d^2x}{dt^2}+\omega ^2s=0$ where $\omega = \sqrt{\frac{k}{m}}$
+\\Auxilliary Equation: $m^2\omega ^2=0 \quad m=0\pm\beta i$
+\\$C_1cos \omega t + C_3 \sin \omega t = A\sin (\omega t + \phi)$ where $A=\sqrt{C_1^2+C_2^2},\;\; \sin\phi=\frac{C_2}{A},\;\; \cos\phi=\frac{C_2}{A},\;\;\tan\phi=\frac{C_1}{C_2}$
+\subsubsection{Example}
+A 16lb weight is attached to a spring, stretching it 1.28 feet. This weight is released 2 feet above the equilibrium position, with initial downward velocity of 1.5 ft/s
+\\DE: $m\frac{d^2x}{dt^2}+kx=0$
+$\begin{cases}
+    \text{Weight}&w=mg=\frac{1}{2} \text{Slug}
+    \\k&F=k\cdot s = 16=k*1.28,\quad 12.5 \frac{lb}{ft}
+\end{cases}$
+\\$\frac{d^2x}{dt^2}+25x=0,\quad x(0)=-2,\quad x'(0)=-1.5$
+\\Solve the equation: $x(t)=C_1\cos 5t +C_2\sin 5t $
+\\$x(t)=-2\cos 5t + 0.3\sin 5t$
+\\Period is $\frac{2\pi}{5}$ seconds or $\frac{5}{2\pi}$ vps
+\subsection{Damped Motion}
+\subsection{Forced Motion}
+\subsection{Electric Circuits}
 
 
 
