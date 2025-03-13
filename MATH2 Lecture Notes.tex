@@ -334,8 +334,73 @@ $\begin{cases}
 \\$x(t)=-2\cos 5t + 0.3\sin 5t$
 \\Period is $\frac{2\pi}{5}$ seconds or $\frac{5}{2\pi}$ vps
 \subsection{Damped Motion}
+Copy Notes from Canvas
 \subsection{Forced Motion}
-\subsection{Electric Circuits}
+With the presence of an external force, the equation of motion has another extra term:
+\\$x \frac{d^2x}{dt^2}=-kx-\beta \frac{dx}{dt}+f(t)$ where $k>0$
+\subsubsection{Example}
+8lb weight, 32/13 ft stretch when hung freely, starts 3 feet below equilibrium, find equation of motion if $f(t)=18.75\sin 2t$ is applied and damping force is 1.5x instantaneous velocity
+\\$m \frac{d^2x}{dt^2}+\beta \frac{dx}{dt}+kx=f(t)
+\\m=\frac{1}{4} , ~\beta = 1.5 ~ k:8=k\cdot\frac{32}{13}=\frac{13}{4}
+\\ \frac{1}{4}x''+\frac{6}{4}x'+\frac{13}{4}x=18.75\sin 2t
+\\x''+6x'+13x=75\sin 2t ~ x(0)=3~x'(0)=0 \\ x_p=A\cos 2t+B\sin 2t ~ A=-4, ~ B=3
+\\x(t)=c_1e^{-3t}\cos 2t +c_2e^{-3t}\sin 2t-4\cos 2t+3\sin 2t
+\\\text{with initial conditions } c_1=7 ~ c_2=\frac{15}{2}
+\\x(t)=7e^{-3t}\cos 2t +\frac{15}{2}e^{-3t}\sin 2t-4\cos 2t+3\sin 2t
+\\-4\cos 2t+3\sin 2t \text{ is the steady state solution and }\\7e^{-3t}\cos 2t +\frac{15}{2}e^{-3t}\sin 2t \text{ is the transient solution} $
+
+\subsection{Electric Circuits \& Other Analogous Systems}
+LRC Circuit: For charge $q=q(t)$ and currtent $i = i(t) = \frac{dq}{dt}$
+$$L \frac{d^2q}{dt^2}+R \frac{dq}{dt} + \frac{q}{c} = E(t) $$
+\subsubsection{Example}
+$L=2H, ~R=8\Omega, ~C=\frac{1}{18}F, ~E(t)=10\sin(t) \;V, ~q(0)=0, ~ i(0)=0$
+$2 \frac{d^2q}{dt^2}+8 \frac{dq}{dt} + 18 \frac{q}{c} = 10\sin t\\ = \frac{d^2q}{dt^2}+4 \frac{dq}{dt} + 9 \frac{q}{c} = 5\sin t 
+\\\frac{d^2q}{dt^2}+4 \frac{dq}{dt} + 9 \frac{q}{c} = 5\sin t \Rightarrow m^2+4m+9=0 \rightarrow m=-2 \pm \sqrt{5}i
+\\q_c(t)=c_1e^{-2t}\cos\sqrt{5}t+c_2e^{-2t}\sin\sqrt{5}t 
+\\y_p = -\frac{1}{4}\cos t + \frac{1}{2} \sin t \quad \text{time for initial conditions} \\
+c_1=\frac{1}{4} \;\; c_2=0 \Rightarrow$ \boxed{q(t)=c_1e^{-2t}\cos\sqrt{5}t-\frac{1}{4}\cos t + \frac{1}{2} \sin t}
+\\Steady state charge: $q=-\frac{1}{4}\cos t + \frac{1}{2} \sin t$
+\\Steady state current: $i=\frac{1}{4}\sin t + \frac{1}{2} \cos t$
+
+\section{DE with Variable Coefficients}
+\subsection{Cauchy-Euler Equations}
+Differential Equations of the form:
+$$a_nx^ny^{(n)}+a_{n-1}x^{n-1}y^{(n-1)}+...+a_1xy'+a_0y=g(x)$$
+\\These are considered equidimensional, where the degree of each monomial coefficient function equals the order of the derivative of y in each term
+
+\subsubsection{General Formula for the Auxilliary Equation}
+$am(m-1)+bm+c=0$ is equivalent to $am^2+(b-a)m+c=0$
+\subsubsection{Forms of Solutions}
+$\begin{cases}
+    \text{Two Real Roots} & y=c_1x^{m_1}+c_2x^{m_2}\\
+    \text{One Repeated Real Root} & y=c_1x^{m_1}+c_2x^{m_1}\ln x\\
+    \text{Complex Conjugate Roots where } m=\alpha \pm i\beta & y=x^\alpha \left[c_1\cos(\beta \ln x)+c_2 \sin(\beta \ln x)\right]
+\end{cases}$
+\subsubsection{Example Case 1}
+Solve $x^2y''+4xy'-4y=0$
+\\Assume $y=x^m \Rightarrow -4y=-4x^m\\y'=mx^{m-1} \Rightarrow 4xy'=4mx^m\\y''=m(m-1)x^{m-2} \Rightarrow x^m
+\\x^2y''+4xy'-4y=m(m-1)x^m+4mx^m-4x^m \Rightarrow  [m(m-1)+4m-4]x^m=0
+\\m^2-m+4m-4=0$ is the auxilliary equation $m=1,\;\;-4 \Rightarrow y_1=x',\;\;y_2=x^{-4}
+\\y=C_1x+C_2x^{-4}$
+\subsubsection{Example Case 2}
+$$9x^2y''+3xy'+y=0 \Rightarrow a=9,~b=3,~c=1 \Rightarrow  (3m-1)^2 \Rightarrow m=\frac{1}{3}$$
+\\$y_1=x^{\frac{1}{3}},~y_2=c_2x^{\frac{1}{3}} \ln x
+\\y=x^{\frac{1}{3}}+c_2x^{\frac{1}{3}} \ln x$
+\subsubsection{Example Case 3}
+Solve the IVP: $x^2y''+3x'y+3y=0 \qquad y(1)=1 \qquad y'(1)=-5$
+\\$m^2+2m+3=0 \Rightarrow m=-1\pm \sqrt{2}i
+y=x^{\frac{1}{3}}+c_2x^{\frac{1}{3}} \ln x
+\\y=x^{-1}\left[c_1\cos(\sqrt{2}\ln x)+c_2\sin(\sqrt{2}\ln x)\right]$
+\\Now time to plug in initial conditions 
+\\$1=1\left[c_1 \cancelto{1}{\cos 0} + c_2 \cancelto{0}{\sin 0} \right] \Rightarrow c_1=1
+\\ y'(x)=x^{-1} \left[-c_1\sin(\sqrt{2}\ln x)\frac{\sqrt{2}}{x} +c_1\frac{\sqrt{2}}{x}\cos(\sqrt{2}\ln x)\right]+x^{-2} \left[c_1\cos(\sqrt{2}\ln x)+c_2\sin(\sqrt{2}\ln x)\right]
+\\-5=y'(1) = c_2 \cdot \sqrt{2}-1 \Rightarrow c_2=-2\sqrt{2}
+\\y(x)=x^{-1}\left[\cos\left(\sqrt{2}\ln x\right)-2\sqrt{2}\sin\left(\sqrt{2}\ln x\right)\right]$
+\subsection{Review of Power Series; Power-Series Solutions}
+
+
+
+
 
 
 
@@ -384,22 +449,22 @@ e^{-5y}=-5e^x-5C_1 \\ -5y=\ln(-5e^x-5C_1) \\ y= -\frac{1}{5}\ln(C-5e^x)$
 \subsection{$y'=2y-y^2$}
 $y'=2y-y^2 \\ \frac{dy}{dx} = y(2-y) \rightarrow \int \frac{dy}{y(2-y)} = \int dx \rightarrow \int \left(\frac{0.5}{y} + \frac{0.5}{2-y}\right) dy=\int dx \\ \frac{1}{2}\ln|y| - \frac{1}{2}\ln|2-y| = x+C_1 \\ \ln|y| - \ln |2-y| = 2x+2C_1
 \\ \ln \left|\frac{y}{2-y}\right| = 2x+2C_1 \Rightarrow \left|\frac{y}{2-y}\right| = e^{2x}e^{2C_1} \rightarrow \frac{y}{2-y} = Ce^{2x} \rightarrow y=CE^{2x}(2-y) \\ y=2Ce^{2x}-Ce^{2x}y \rightarrow (1+Ce^{2x})y=2Ce^{2x} \\ \boxed{y=\frac{2Ce^{2x}}{1+Ce^{2x}}} \rightarrow \frac{2C}{e^{-2x}+C}$
-\subsection{}
+\subsection{$(x-y)dx+xdy=0$}
 $(x-y)dx+xdy=0$
 \\Substitution $y=ux \Rightarrow dy=udx+xdu$
 \\$(x-ux)dx+x(udx+xdu)=0 \\ xdx-uxdx+uxdx+x^2du=0 \\ xdx+x^2du=0 \\ \int du= -\int \frac{1}{x}dx \Rightarrow u=-\ln |x|+C \\ u=\frac{y}{x} \\ \frac{y}{x}=C-\ln|x| \\ y=Cx-x\ln |x|$
-\subsection{}
+\subsection{$(x^3+y^2)dx=3xy^2dy=0$}
 $(x^3+y^2)dx=3xy^2dy=0$ is conservative, so find $f(x,y)$ that satisfies $M=f_x, N=f_y$
 \\$\int (x^3+y^3)dx = \frac{x^4}{4}+xy^3+g(y)$ and $\int xy^2dy = {xy^3} + g'(y) \\ f(x,y)=\frac{x^4}{4}+xy^3=C$
-\subsection{}
+\subsection{Logistic Growth Rumor}
 Big Mouth John brings a juicy rumor to a town of 5000. Assume logistic growth. After 5 days 200 people have heard it. How many people will have heard it after 7 days?
 $\frac{dP}{dt}=kP(5000-P) = P(5000k-kP) \rightarrow a=5000k \\ P(t)=\frac{aP_0}{bP_0+(a-bP_0)e^{-at}} \\ P(t)=\frac{5000k\cdot 1}{k \cdot 1 + (5000k-k\cdot 1)e^{-5000kt}}=\frac{5000k}{k+4999ke^{-5000kt}} = \frac{5000}{1+4999e^{-5000kt}}$
 \\[0.05in]From here use $P(5)=200$ to determine $k$ 
-\\[0.05in]$P(t)=\frac{5000}{1+4999e^{-5000kt}} \Rightarrow 200=\frac{5000}{1+4999e{-25000k}}
+\\[0.05in]$P(t)=\frac{5000}{1+4999e^{-5000kt}} \Rightarrow 200=\frac{5000}{1+4999e^{-25000k}}
 \\1+4999e^{-25000k}=25
 \\e^{-25000k}=\frac{24}{4999} \\ k=-\frac{1}{25000}\ln\left(\frac{25}{4999}\right) = 2.13557\text{E}-4
 $\\Now plug in for P(7)=1303.3603 people
-\subsection{}
+\subsection{Chemical Reaction}
 Compound C is formed as a reaction of A and B $A+B\rightarrow C$. The resulting reaction is such that
 \begin{enumerate}
     \item For each gram of $B$, 3 grams of $A$ are used
@@ -423,11 +488,11 @@ Compound C is formed as a reaction of A and B $A+B\rightarrow C$. The resulting 
 \subsection{Find the auxilliary equation for the DE}
 $3y''+5y'-2y=0
 \\3m^2+5m-2=0$
-\subsection*{Solve}
+\subsection{$3m^2+5m-2=0$}
 $3m^2+5m-2=0$
 \\Solutions to quadratic formula $m_1=\frac{1}{3}\;\;m_2=-2$
 \\Solution to DE $y=c_1e^{\frac{x}{3}}+c_2e^{-2x}$
-\subsection*{Solve}
+\subsection{$m^2+4m+4=0$}
 $m^2+4m+4=0
 \\(m+2)^2=0, \;\;\; m=-2
 \\y=c_1e^{-2x}+c_2xe^{-2x}$
