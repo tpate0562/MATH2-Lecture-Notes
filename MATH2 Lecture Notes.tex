@@ -334,7 +334,9 @@ $\begin{cases}
 \\$x(t)=-2\cos 5t + 0.3\sin 5t$
 \\Period is $\frac{2\pi}{5}$ seconds or $\frac{5}{2\pi}$ vps
 \subsection{Damped Motion}
-Copy Notes from Canvas
+\subsubsection{Differential Equation form}
+$\frac{d^2x}{dt^2}+2\lambda \frac{dx}{dt}+\omega ^2 x=0$
+Forms of solutions
 \subsection{Forced Motion}
 With the presence of an external force, the equation of motion has another extra term:
 \\$x \frac{d^2x}{dt^2}=-kx-\beta \frac{dx}{dt}+f(t)$ where $k>0$
@@ -397,6 +399,42 @@ y=x^{\frac{1}{3}}+c_2x^{\frac{1}{3}} \ln x
 \\-5=y'(1) = c_2 \cdot \sqrt{2}-1 \Rightarrow c_2=-2\sqrt{2}
 \\y(x)=x^{-1}\left[\cos\left(\sqrt{2}\ln x\right)-2\sqrt{2}\sin\left(\sqrt{2}\ln x\right)\right]$
 \subsection{Review of Power Series; Power-Series Solutions}
+$f(x)=\sum_{n=0}^{\infty}c_n(x-a)^n$
+\subsubsection{Example}
+Where does $\sum_{n=1}^{\infty} \frac{x^n}{n^2}$ converge?
+\\$L=\lim_{k\to \infty}\left|\frac{\frac{x^{k+1}}{(k+1)^2}}{\frac{x^k}{k^2}}\right|=\lim_{k\to\infty}\left|\frac{x^{k+1}}{x^k}\right|\cdot \left|\frac{k^2}{(k+1)^2}\right|
+=|x|\cdot \lim_{k\to\infty}\frac{k^2}{(k+1)^2}$ for x=1 and x=-1 both $\sum_{n=1}^{\infty}\frac{1^n}{n^2}$ and $\sum_{n=1}^{\infty}\frac{-1^n}{n^2}$ converges by the p series test and alternating series test
+\pagebreak \subsubsection{Write $\sum_{n=1}^{\infty}2nc_nx^{n-1}+\sum_{n=0}^{\infty}6c_nx^{n+1}$ as one series}
+Write it out manually
+\\First: $2c_1+4c_2x+6c_3x^2+8c_4x^3+... =2c_1+\sum_{n=2}^{\infty}2nc_nx^{n-1} = k=n-1 \quad 2c_1+\sum_{k=1}^{\infty}2(k+1)c_{k+1}x^k$
+\\2nd: $\qquad \quad 6c_0x+6c_1x^2+6c_2x^3 = \sum_{n=0}^{\infty 6c_nx^{n+1}} = ~~{k=n-1} ~~ \sum_{k=1}^{\infty}6c_{k-1}x^k$
+\\Combine them: $2c_1+\sum_{k=1}^{\infty} (2(k+1)c_{k+1}+6c_k-1) x^k$
+\subsubsection{Use Power Series to solve $y'-2xy=0$}
+$y=\sum_{n=0}^{\infty}c_nx^n \qquad y'=\sum_{n=1}^{\infty}nc_nx^{n-1} \qquad 2xy=2x\sum_{n=0}^{\infty}c_nx^n = \sum_{n=0}^{\infty}2c_nx^{n+1}
+\\y'-2xy=\sum_{n=1}^{\infty}nc_nx^{n-1}-\sum_{n=0}^{\infty}2c_nx^{n+1}$ Let $k=n-1,\; n=k+1$
+\\$y'=c_1+\sum_{k=1}^{\infty}(k+1)c_{k+1}x^k \qquad -2xy=-\sum_{k=1}^{\infty}2c_{k-1}x^k
+\\y'-2xy= c_1+\sum_{k=1}^{\infty}(k+1)c_{k+1}x^k-\sum_{k=1}^{\infty}2c_{k-1}x^k =c_1+\sum_{k=1}^{\infty}\left[(k+1)c_{k+1}-2c_{k-1}\right]x^k=0
+\\c_1=0, \qquad (k+1)c_{k+1}=-2c_{k+1} \Rightarrow c_{k+1}=\frac{2c_{k-1}}{k+1}$
+\\$c_0$ is an arbitrary constant $c_1=0 \qquad c_{k+1}=\frac{2c_{k-1}}{k+1}
+\\c_2=c_0 \quad c_3=0 \quad c_4=\frac{1}{2}c_0 \quad c_6=\frac{c_0}{6} \quad c_8=\frac{c_0}{24}
+\\\begin{cases}
+    0 & \text{If n is odd}
+    \\\frac{c_0}{\left(\frac{n}{2}\right)!} & \text{If n is even}
+\end{cases} 
+\qquad \qquad \text{If } m=\frac{n}{2} \Rightarrow \frac{c_0}{m!}$
+\\$\sum_{m=0}^{\infty}\frac{c_0}{m!}x^{2m}=c_0\sum_{m=0}^{\infty}\frac{x^{2m}}{m!}$ which converts to $c_0e^{x^2}$
+\subsubsection{$4y''+y=0$}
+$y= \sum_{n=0}^{\infty}c_nx^n \qquad y'=\sum_{n=1}^{\infty}nc_nx^{n-1} \qquad y'' = \sum_{n=2}^{\infty}n(n-1)c_nx^{n-2}
+\\4y'' = \sum_{n=2}^{\infty}4n(n-1)c_nx^{n-2} \qquad y=\sum_{n=0}^{\infty}c_nx^n \Rightarrow \sum_{k=0}^{\infty}(4(k+2)(k+1)c_{k+2}+c_k)x^k=0
+\\\text{Solve for }c_{k+2} = -\frac{c_k}{4(k+1)(k+2)} \;\; k\in \mathbb{Z}
+\\c_2=-\frac{c_0}{8} \qquad c_3=\frac{c_1}{24} \qquad c_4=\frac{c_0}{4^2\cdot 4!} \qquad c_5=\frac{c_1}{4^2 \cdot 5!}$
+\\[0.05in]General Pattern: $\begin{cases}
+    c_n=(-1)^{\frac{n}{2}}\frac{c_0}{4^{\frac{n}{2}}\cdot n!} & \text{ When n is even}
+    \\c_n=c_{2m+1} = (-1)^m \cdot \frac{c_1}{4^m\cdot (2m+1)!} & \text{ When n is odd}
+\end{cases}
+\\ c_0\sum_{m=0}^{\infty} \frac{(-1)^m}{(2m)!}\left(\frac{x}{2}\right)^{2m}+c_1\sum_{m=0}^{\infty}\frac{(-1)^m}{(2m+1)!}\left(\frac{x}{2}\right)^{2m+1}
+$ 
+\\Converts to $y=c_1\cos\frac{x}{2}+c_2\sin\frac{x}{2}$
 
 
 
