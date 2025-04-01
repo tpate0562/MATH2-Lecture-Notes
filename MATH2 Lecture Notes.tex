@@ -9,6 +9,7 @@
 \usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage{amsfonts}
+\usepackage{mathrsfs}
 \usepackage{circuitikz}
 \usepackage{multirow}
 \usepackage{amsopn}
@@ -436,9 +437,29 @@ $y= \sum_{n=0}^{\infty}c_nx^n \qquad y'=\sum_{n=1}^{\infty}nc_nx^{n-1} \qquad y'
 $ 
 \\Converts to $y=c_1\cos\frac{x}{2}+c_2\sin\frac{x}{2}$
 
-
-
-
+\section{Laplace Transformations}
+\subsection{Laplace Transform:}
+\begin{itemize}
+    \item Method used to solve certain DEs in an easier way
+    \item Converts DE/IVP into simpler equations
+\end{itemize}
+\subsubsection{Definition}
+Let $f(t)$ be a function, where $t\geq 0$ then $$\mathscr{L}\left\{f(t)\right\}=\int_{0}^{\infty}e^{-st}f(t) dt,~s>0$$
+\subsubsection{Example $\mathscr{L}$}
+$\int_{0}^{\infty} e^{-st}* 1 dt = \lim_{b\to \infty}\int_{0}^{b}e^{-st} dt = \lim_{b \to \infty} {\left[\frac{e^{-st}}{-s}\right]_{t=0}}^{t=b}$ results in $\frac{1}{s}$
+\subsubsection{Theorem}
+$\mathscr{L}\left\{\alpha f(t) + \beta g(t)\right\}-\alpha\mathscr{L}\left\{f(t)\right\}+\beta\mathscr{L}\left\{g(t)\right\}$
+\subsubsection{Theorem}
+If $f$ is piecewise continuous on $[0,\infty)$, and $f$ is of \textbf{exponential order}, then $\mathscr{L}\left\{f(t)\right\}$ exists for $s>c$
+\subsubsection{Forms of Laplace Transformations}
+$t^n \Rightarrow = \frac{n!}{s^{n+1}}$
+\\ $e^{at} \Rightarrow \frac{1}{s-a}$
+\\ $\cos(kt) = \frac{s}{k^2+s^2}$
+\\ $\sin(kt) = \frac{k}{k^2+s^2}$
+\\ $\cosh(kt) = \frac{s}{s^2-k^2}$
+\\ $\sinh(kt) = \frac{k}{s^2-k^2}$
+\\ $te^{at} = \frac{1}{(s-a)^2}$
+\\ $t^ne^{at} = \frac{n!}{(s-a)^{n+1}}$
 
 
 
