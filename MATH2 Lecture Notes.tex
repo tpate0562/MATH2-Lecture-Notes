@@ -450,13 +450,13 @@ $
     \item Converts DE/IVP into simpler equations
 \end{itemize}
 \subsubsection{Definition}
-Let $f(t)$ be a function, where $t\geq 0$ then $$\mathscr{L}\left\{f(t)\right\}=\int_{0}^{\infty}e^{-st}f(t) dt,~s>0$$
-\subsubsection{Example $\mathscr{L}$}
+Let $f(t)$ be a function, where $t\geq 0$ then $$\mathcal{L}\left\{f(t)\right\}=\int_{0}^{\infty}e^{-st}f(t) dt,~s>0$$
+\subsubsection{Example $\mathcal{L}$}
 $\int_{0}^{\infty} e^{-st}* 1 dt = \lim_{b\to \infty}\int_{0}^{b}e^{-st} dt = \lim_{b \to \infty} {\left[\frac{e^{-st}}{-s}\right]_{t=0}}^{t=b}$ results in $\frac{1}{s}$
 \subsubsection{Theorem}
-$\mathscr{L}\left\{\alpha f(t) + \beta g(t)\right\}-\alpha\mathscr{L}\left\{f(t)\right\}+\beta\mathscr{L}\left\{g(t)\right\}$
+$\mathcal{L}\left\{\alpha f(t) + \beta g(t)\right\}-\alpha\mathcal{L}\left\{f(t)\right\}+\beta\mathcal{L}\left\{g(t)\right\}$
 \subsubsection{Theorem}
-If $f$ is piecewise continuous on $[0,\infty)$, and $f$ is of \textbf{exponential order}, then $\mathscr{L}\left\{f(t)\right\}$ exists for $s>c$
+If $f$ is piecewise continuous on $[0,\infty)$, and $f$ is of \textbf{exponential order}, then $\mathcal{L}\left\{f(t)\right\}$ exists for $s>c$
 \subsubsection{Forms of Laplace Transformations}
 $t^n \Rightarrow = \frac{n!}{s^{n+1}}$
 \\ $e^{at} \Rightarrow \frac{1}{s-a}$
@@ -466,26 +466,76 @@ $t^n \Rightarrow = \frac{n!}{s^{n+1}}$
 \\ $\sinh(kt) = \frac{k}{s^2-k^2}$
 \\ $te^{at} = \frac{1}{(s-a)^2}$
 \\ $t^ne^{at} = \frac{n!}{(s-a)^{n+1}}$
-\\ $\cos^2t=\frac{1}{2} \mathscr{L} \left\{1+\cos 2t \right\} = \frac{1}{2}\left(\frac{1}{s}+\frac{s}{s^2+4}\right)$
+\\ $\cos^2t=\frac{1}{2} \mathcal{L} \left\{1+\cos 2t \right\} = \frac{1}{2}\left(\frac{1}{s}+\frac{s}{s^2+4}\right)$
 \\ $e^{at}\cos kt = \frac{s-a}{(s-a)^2+k^2}$
 \\ $e^{at}\sin kt = \frac{k}{(s-a)^2+k^2}$
-
+\subsubsection{Piecewise Laplace Tranform}
+Suppose $f(t) = \begin{cases}
+    0 & 0 \leq t < a
+    \\k &  t \geq a
+\end{cases}$
+$\mathcal{L}f(t) = \int_{0}^{\infty}e^{-st}f(t)dt = \cancelto{0}{\int_{0}^{a}e^{-st}\cdot 0 dt} + \int_{a}^{\infty} e^{-st}\cdot k dt = \frac{ke^{-sa}}{s}$
 \subsection{Inverse Laplace Transform:}
-$\mathscr{L}^-1 \left\{F(s)\right\}=f(t)$
+$\mathcal{L}^-1 \left\{F(s)\right\}=f(t)$
 
 \subsubsection{Example}
-Inverse Laplace Transform $\frac{1}{s^5}=\mathscr{L}^{-1}\left\{\frac{1}{4!}\frac{4!}{s^5}\right\}=\frac{1}{4!}\mathscr{L}^{-1}\left\{\frac{4!}{s^5}\right\}=\frac{t^4}{4!}=\frac{t^4}{24}$
-\\ 2: ILT: $\mathscr{L}^{-1}\left\{\frac{5s-4}{s^2-3}\right\}=5\mathscr{L}^{-1}\left\{\frac{s}{s^2+3}\right\}-4\mathscr{L}^{-1}\left\{\frac{\sqrt{3}}{s^2+3}\right\}=5\cos\sqrt{3}t-\frac{4}{\sqrt{3}}\sin\sqrt{3}t$
-\\ 3: ILT: $\mathscr{L}^{-1}\left\{\frac{1}{(s+1)(s-2)(s-3)}\right\}=\mathscr{L}^{-1}\left\{\frac{1/12}{s+1}+\frac{-1/3}{s-2}+\frac{1/4}{s-3}\right\}$ distribute the transform 
-\\ NEEDS COMPLETION
-\\ 4: ILT: $\mathscr{L}^{-1}\left\{\frac{s+1}{s^2(s+2)^3}\right\} \Rightarrow \text{PFD} \Rightarrow \frac{-1}{16}+\frac{1}{8}t+\frac{1}{16}e^{-2t}-\frac{1}{8}t^2e^{-2t}$
+Inverse Laplace Transform $\frac{1}{s^5}=\mathcal{L}^{-1}\left\{\frac{1}{4!}\frac{4!}{s^5}\right\}=\frac{1}{4!}\mathcal{L}^{-1}\left\{\frac{4!}{s^5}\right\}=\frac{t^4}{4!}=\frac{t^4}{24}$
+\\ 2: ILT: $\mathcal{L}^{-1}\left\{\frac{5s-4}{s^2-3}\right\}=5\mathcal{L}^{-1}\left\{\frac{s}{s^2+3}\right\}-4\mathcal{L}^{-1}\left\{\frac{\sqrt{3}}{s^2+3}\right\}=5\cos\sqrt{3}t-\frac{4}{\sqrt{3}}\sin\sqrt{3}t$
+\\ 3: ILT: $\mathcal{L}^{-1}\left\{\frac{1}{(s+1)(s-2)(s-3)}\right\}=\mathcal{L}^{-1}\left\{\frac{1/12}{s+1}+\frac{-1/3}{s-2}+\frac{1/4}{s-3}\right\}$ distribute the transform $\frac{1}{12}\mathcal{L}^{-1}\left\{\frac{1}{s+1}\right\}-\frac{1}{3}\mathcal{L}^{-1}\left\{\frac{1}{s-2}\right\}+\frac{1}{4}\mathcal{L}^{-1}\left\{\frac{1}{s-3}\right\} = \frac{1}{12}\left(e^{-t}-4e^{2t}+3e^{3t}\right)$
+\\ 4: ILT: $\mathcal{L}^{-1}\left\{\frac{s+1}{s^2(s+2)^3}\right\} \Rightarrow \text{PFD} \Rightarrow \frac{-1}{16}+\frac{1}{8}t+\frac{1}{16}e^{-2t}-\frac{1}{8}t^2e^{-2t}$
+\subsubsection{Theorem}
+Just like $\mathcal{L}$, $\mathcal{L}^{-1}$ is also linear, so $\mathcal{L}^{-1}\left\{\alpha F(s)+\beta G(s)\right\}=\mathcal{L}^{-1}\left\{\alpha F(s)\right\} + \mathcal{L}^{-1}\left\{\beta G(s)\right\}$
 \subsubsection{Theorem}
 Every Laplace transform $\to$ 0 as $s\to\infty$
+\subsection{Translation Theorems \& Derivatives of a Transform}
+\subsubsection{First Translation Theorem}
+For $a \in \mathbb{R}$ $\mathcal{L}\left\{e^{at}f(t)\right\}=F(s-a)$ where $F(s)=\mathcal{L}\left\{f(t)\right\}$
+\\For the Inverse: $\mathcal{L}^{-1}\left\{F(s-a)\right\}=\mathcal{L}^{-1}\left\{F(s)|_{s \to (s-a)}\right\}=e^{at}f(t)$
+\\\textbf{Notation:} $\mathcal{L}\left\{e^{at}f(t)\right\}=\mathcal{L}\left\{f(t)\right\}_{s\to (s-a)} = F(s)|_{s\to (s-a)}$
+\subsubsection{Second Translation Theorem}
+$\mathcal{L}\left\{f(t-a)\mathcal{U}(t-a)\right\}=e^{-sa}\mathcal{L}\left\{f(t)\right\}=e^{-sa}F(s)$
+\subsubsection{Examples}
+$\mathcal{L}\left\{e^{-3t}t^4\right\} = \mathcal{L}\left\{t^4\right\}_{s\to s+3} = \frac{4!}{s^5}|_{s \to s+3} = \frac{24}{(s+3)^5}$
+\\$\mathcal{L}\left\{e^{5t}\cos 2t\right\} = \mathcal{L}\left\{\cos 2t \right\}_{s \to (s-5)} = \frac{s}{s^2+4}\vert_{s \to (s-5)} = \frac{s-5}{s^2-10s+29}$
+\\$\mathcal{L}^{-1}\left\{\frac{s}{s^2+4s+9}\right\}=\mathcal{L}^{-1}\left\{\frac{s}{s^2+4s+4+5}\right\}=\mathcal{L}^{-1}\left\{\frac{s}{(s+2)^2+5}\right\} = \mathcal{L}^{-1}\left\{\frac{s+2-2}{(s+2)^2+5}\right\} =\\ \mathcal{L}^{-1}\left\{\frac{s+2}{(s+2)^2+5}\right\} -2\mathcal{L}^{-1}\left\{\frac{1}{(s+2)^2+5}\right\}= \mathcal{L}^{-1}\left\{\frac{s+2}{(s+2)^2+5}\right\} -\frac{2}{\sqrt{5}}\mathcal{L}^{-1}\left\{\frac{\sqrt{5}}{(s+2)^2+5}\right\}=\\$ \boxed{e^{-2t}\left(\cos \sqrt{5}t-\frac{2}{\sqrt{5}}\sin\sqrt{5}t\right)}
+\\$\mathcal{L}\left\{(t-2)^3\mathcal{U}(t-2)\right\}=e^{-2s}\mathcal{L}\left\{t^3\right\}=e^{-2s}\frac{3!}{s^4}=\frac{6e^{-2s}}{s^4}$
 
-
-
-
-
+\subsubsection{Unit Step Function}
+Defined as: $\mathcal{U}(t-a)\begin{cases}
+    0 & 0 \leq t < a
+    \\ 1 & t \geq a
+\end{cases}$, the $t$ value at which the argument is equal to 0 is where the jump happens
+\\$\mathcal{U}(t-a)$: \begin{tikzpicture}[>=stealth,scale=1.0, baseline={(current bounding box.center)}]
+    \draw[->] (-0.5,0) -- (4.5,0) node[right] {\(t\)};
+    \draw[->] (0,-0.5) -- (0,1.5) node[above] {\(y\)};
+    \draw[dashed] (2,-0.5) -- (2,1.5);
+    \draw[thick,red] (0,0) -- (2,0);
+    \draw[thick,red] (2,1) -- (4,1);
+    \draw[fill=white,draw=red,thick] (2,0) circle (2pt);
+    \draw[fill=red,draw=red] (2,1) circle (2pt);
+    \node[below] at (2,0) {\(a\)};
+    \node[left]  at (0,1) {\(1\)};
+    \node[right] at (4,1) {\(\mathcal{U}(t-a)\)};
+\end{tikzpicture}
+\\$k\mathcal{U}(t-a)$: \begin{tikzpicture}[>=stealth,scale=1.0, baseline={(current bounding box.center)}]
+    \draw[->] (-0.5,0) -- (4.5,0) node[right] {\(t\)};
+    \draw[->] (0,-0.5) -- (0,2.5) node[above] {\(y\)};
+    \draw[dashed] (2,-0.5) -- (2,2.5);
+    \draw[thick,orange] (0,0) -- (2,0);
+    \draw[thick,orange] (2,2) -- (4,2);
+    \draw[fill=white,draw=orange,thick] (2,0) circle (2pt);
+    \draw[fill=orange,draw=orange] (2,2) circle (2pt);
+    \node[below] at (2,0) {\(a\)};
+    \node[left]  at (0,2) {\(k\)};
+    \node[right] at (4,2) {\(k\,\mathcal{U}(t-a)\)};
+\end{tikzpicture}
+\subsubsection{Differentiation: Derivatives of Transforms}
+$\mathcal{L}\left\{t^nf(t)\right\}=(-1)^n\frac{d^n}{ds^n}\mathcal{L}\left\{f(t)\right\}=(-1)^n\frac{d^n}{ds^n}F(s)$
+\subsubsection{Examples}
+$\mathcal{L}\left\{te^{at}\right\}=\frac{d}{ds}\mathcal{L}\left\{e^{at}\right\}=-\frac{d}{ds}\left[\frac{1}{s-a}\right]=\frac{1}{(s-a)^2}$
+\\$\mathcal{L}\left\{t^2 \cos kt\right\}= \frac{d^2}{ds^2}\mathcal{L}\left\{\cos kt\right\}=-\frac{d}{ds}\left[\frac{s^2-k^2}{(s^2+k^2)^3}\right]=  \frac{2s(3^2-3k^2)}{(s^2+k^2)^3}$
+\\$\mathcal{L}\left\{te^{at}\sin kt \right\} =-\frac{d}{ds}\left[\mathcal{L}\left\{e^{at} \sin kt\right\}\right]=
+-\frac{d}{ds}\left[\mathcal{L}\left\{\sin kt\right\}\right]_{s\to (s-a)}=-\frac{d}{ds}\left[k(s^2+k^2)^{-1}\right]_{s\to (s-a)}\\ = -k (-1)(s^2+k^2)^{-2}\cdot 2s |_{s\to (s-a)}=\frac{2ks}{(s^2+k^2)^2|_{s\to (s-a)}}=$\boxed{\frac{2k(s-a)}{\left[(s-a)^2+k^2\right]^2}}
 
 
 

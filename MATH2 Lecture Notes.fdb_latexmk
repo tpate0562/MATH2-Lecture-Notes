@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1744071634.48039 "/Users/tejaspatel/Desktop/LaTeX Projects/MATH2 Lecture Notes/MATH2 Lecture Notes.tex" "MATH2 Lecture Notes.pdf" "MATH2 Lecture Notes" 1744071636.23908 0
-  "/Users/tejaspatel/Desktop/LaTeX Projects/MATH2 Lecture Notes/MATH2 Lecture Notes.tex" 1744071634.24953 37144 a1ff93da30112e16d914ee7b162d9193 ""
+["pdflatex"] 1744515633.06239 "/Users/tejaspatel/Desktop/LaTeX Projects/MATH2 Lecture Notes/MATH2 Lecture Notes.tex" "MATH2 Lecture Notes.pdf" "MATH2 Lecture Notes" 1744515634.4232 0
+  "/Users/tejaspatel/Desktop/LaTeX Projects/MATH2 Lecture Notes/MATH2 Lecture Notes.tex" 1744515631.4487 41717 9cbfe976653d28c0805015f2fa7180dd ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -57,7 +57,6 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb" 1248133631 11493 4f5ed183a47d3197cf8cd322325db6de ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb" 1215737283 138258 6525c253f16cededa14c7fd0da7f67b2 ""
-  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb" 1229303445 16077 4737ac34f0fb5608550f3780a0202c22 ""
   "/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1576625341 40635 c40361e206be584d448876bba8a64a3b ""
@@ -259,10 +258,10 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1729555295.99067 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1729555229 8221428 380a9ae05887af09f5a76ce7a01b05d8 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "MATH2 Lecture Notes.aux" 1744071636.0895 11973 7965357772638faa3b089dbd628aa805 "pdflatex"
-  "MATH2 Lecture Notes.out" 1744071636.0915 14849 437f03ff5e6fa0acce311ec2b545132c "pdflatex"
-  "MATH2 Lecture Notes.tex" 1744071634.24953 37144 a1ff93da30112e16d914ee7b162d9193 ""
-  "MATH2 Lecture Notes.toc" 1744071636.09184 8197 831ffd1344b33cad056f69ec24ef3f43 "pdflatex"
+  "MATH2 Lecture Notes.aux" 1744515634.31086 13235 7612fb67a77b075ef096e8684ed67976 "pdflatex"
+  "MATH2 Lecture Notes.out" 1744515634.31297 16550 c58edf692ec85633729edbb19225d1bd "pdflatex"
+  "MATH2 Lecture Notes.tex" 1744515631.4487 41717 9cbfe976653d28c0805015f2fa7180dd ""
+  "MATH2 Lecture Notes.toc" 1744515634.31325 9090 915139fd90668cafdf5c45d691b57147 "pdflatex"
   (generated)
   "MATH2 Lecture Notes.aux"
   "MATH2 Lecture Notes.log"
