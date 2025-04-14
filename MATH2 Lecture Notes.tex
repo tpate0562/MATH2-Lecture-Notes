@@ -49,7 +49,7 @@ of one or more dependent variables, with respect to one or more independent vari
 ${\displaystyle a_{0}(x)y+a_{1}(x)y'+a_{2}(x)y''\cdots +a_{n}(x)y^{(n)}=b(x)}$\\
 For a DE to be linear:
 \begin{enumerate}
-    \item Y and all of its derivatives much be of the 1st degree
+    \item Y and all of its derivatives must be of the 1st degree
     \item Any term that does not include y or any of its derivatives must be a function of x
 \end{enumerate}
 \subsection{Some Mathematical Models}
@@ -105,7 +105,7 @@ $\frac{dp}{dt}=kP(N-P)$
 \subsubsection*{V: Chemical Reaction}
 $A+B\rightarrow C$ Concentrations of A and B decreases by amount of C formed \\ 
 Can we write DE governing the concentration of C x(t)? \\ 
-The rate at which the reaaction takes place $\propto$ Product of the remaining concentrations of A and B
+The rate at which the reaction takes place $\propto$ Product of the remaining concentrations of A and B
 \\ $\alpha$ initial concentration of A
 \\ $\beta$ initial concentration of B
 \\ $\frac{dx}{dt} = k(\alpha - x)(\beta - x)$
@@ -126,7 +126,7 @@ The initial value problem
     \frac{dy}{dx} =1+y^2
     \\ y(0)=0
 \end{cases}$ has a unique solution. In fact, we can easily verify that $y=\tan x$ satisfies this IVP
-\\ However note that there are some inervals on which $y=\tan x$ cannot be a solution for this IVP, such as (-2,2),
+\\ However note that there are some intervals on which $y=\tan x$ cannot be a solution for this IVP, such as (-2,2),
 where the function is discontinuous at $\pm \frac{\pi}{2}$ but can be used for (-1,1) since it is continuous at all points within the interval
 \subsection{Separable Variables (Separable Equations)}
 \subsubsection{\textbf{Definition: }}A differential equation that can be written in the form $\frac{dy}{dx}= \frac{g(x)}{h(y)}$ is said to be separable (or have separable variables).
@@ -142,9 +142,9 @@ $\int (y+3)^-2 dy=\int dx \rightarrow (y+3)^-2/-1=x+C_1 \rightarrow \frac{1}{y+3
 \subsection{Homogeneous Equations} 
 \textbf{What do we do if the DE is not separable?}
 \subsubsection{Definition} A function $f(x,y)$ is said to be \textbf{homogeneous of degree} $n$ if, for $x, y,$ and$ t $where $f(x,y)$ and $f(tx,ty)$ are defined: \\$$f(tx,ty)=t^nf(x,y)$$
-\subsubsection{Example} Determine wheteher each function is homogeneous: \\
+\subsubsection{Example} Determine whether each function is homogeneous: \\
 a: $ f(x,y)=x^3-7x^2y+4y^3 \rightarrow f(tx,ty)=(tx^3)-7(tx)^2(ty)+4(ty)^3\\t^3x^3-7t^3x^2y+4t^3y^3\\t^3(x^3-7x^2y-4y^3)=t^3f(x,y)$
-\\How to tell quickly wheteher $f(x,y)$ is homogeneous:
+\\How to tell quickly whether $f(x,y)$ is homogeneous:
 \\Each term must have the same combined degree
 \\Example: $x^3-7x^2y+4y^3$ is D3, $x^2+y^2-4x$ is not, $\sqrt{x^5+4y^5}$ is with D 2.5, $\frac{3y}{x}-2$ is D0
 \subsubsection{Differential Equation form}
@@ -173,7 +173,7 @@ $(3x^2-7y)dx+(-7x+2y)dy=0$ \\Using 1C techniques it is $f(x,y)=x^3-2xy+y^2+k$
 \\Solution: $f(x,y)=x+y\ln x=c$
 \subsection{Linear Equations}
 Recall: First Order Linear DE is a DE in the form $a_1(x)\frac{dy}{dx}+a_0(y)y=g(x),\qquad a_1(x)\neq 0$
-\\Divide both sidex by $a_1(x) \Rightarrow \frac{dy}{dx}+\frac{a_0(x)}{a_1(x)}y=\frac{g(x)}{a_1(x)}$ where $P(x)=\frac{a_0(x)}{a_1(x)}$ and $f(x)=\frac{g(x)}{a_1(x)}$\\
+\\Divide both sides by $a_1(x) \Rightarrow \frac{dy}{dx}+\frac{a_0(x)}{a_1(x)}y=\frac{g(x)}{a_1(x)}$ where $P(x)=\frac{a_0(x)}{a_1(x)}$ and $f(x)=\frac{g(x)}{a_1(x)}$\\
 \\$\frac{dy}{dx}+P(x)y=f(x)$ There is an integrating factor $\mu(x)$ that turns this DE into an exact DE
 \\$dy+P(x)ydx=f(x)dx \rightarrow dy\left[P(x)y-f(x)\right] dx=0 
 \\\mu(x)dy+\mu(x)\left[P(x)y-f(x)\right]dx=0 \rightarrow \mu '(x)=\mu(x)P(x) \\ \frac{d\mu}{dx}=\mu P
@@ -187,7 +187,7 @@ Recall: First Order Linear DE is a DE in the form $a_1(x)\frac{dy}{dx}+a_0(y)y=g
     \item Find the integrating factor $\mu(x)=e^{\int P(x)dx}$
     \item Multiply each side of the DE by $\mu(x)$
     \item Rewrite the left side as $\frac{d}{dx} \left[\mu(x)\cdot y\right]$
-    \item Integrate both sides with respect to x and retreive an implicitly expressed solution
+    \item Integrate both sides with respect to x and retrieve an implicitly expressed solution
     \item Solve for y
 \end{enumerate}
 \subsection{What method to use to solve?}
@@ -229,13 +229,13 @@ $\frac{dP}{dt}=P(a-bP)\\\frac{d^2P}{dt^2}=\frac{dP}{dt}(a-2bP)=P(a-bP)(a-2bP)=0$
 $\begin{cases}
     0<P_0<\frac{a}{2b} & \text{Hits inflection point while rising to CC}\\
     \frac{a}{2b}<P_0<\frac{a}{b} & \text{Population grows at a decreasing rate to CC}\\
-    P_0>\frac{a}{b} & \text{Population falls to the carying capacity}
+    P_0>\frac{a}{b} & \text{Population falls to the carrying capacity}
 \end{cases}$
 \section{Linear DE of Higher Order}
 \subsection{Preliminary Theory}
 Initial Value Problem $a_n(x)y^{(n)}+a_{n-1}(x)y^{(n-1)}+...+a_1(x)y'+a_0(x)y=g(x)$
 \\Initial Conditions $y(x_0)=y_0...y^{(n-1)}(x_0)=y_0^{(n-1)}$
-\\\textbf{Theorem} Let easch $a_j(x)$ be continuous on an interval I and let $a_n(x)\neq 0$ for every... CONTINUE LATER
+\\\textbf{Theorem} Let each $a_j(x)$ be continuous on an interval I and let $a_n(x)\neq 0$ for every... CONTINUE LATER
 \\Boundary-Value Problem for 2nd order Linear DE $a_2(x)y''+a_1(x)y'+a_0(x)y=g(x)\\  \qquad y(a)=y_0 \qquad y(b)=y_1$
 \\Example: $y''+16y=0 \quad y(0)=0 \quad y(\pi/2) = 0
 \\y=\sin 4x$ and $y=\cos 4x$ are solutions so $y(x)=c_1\cos 4x+ c_2 \sin 4x
@@ -268,8 +268,8 @@ $$ay''+by'+cy$$
     \\y'=me^{mx}
     \\y''=m^2e^{mx}
 \end{cases}$ so $am^2e^{mx}+bme^{mx}+ce^{mx}=0=e^{mx}(am^2+bc+c)$
-\subsubsection{Auxilliary Equation for a DE} $am^2+bm+c=0$
-\subsubsection{Three Scenarios for the Auxilliary Equation}
+\subsubsection{Auxiliary Equation for a DE} $am^2+bm+c=0$
+\subsubsection{Three Scenarios for the Auxiliary Equation}
 $\begin{cases}
     \text{If}\;\; b^2-4ac>0 & \text{two real roots}\;\; y=c_1e^{m_1x}+c_2e^{m_2x}
     \\ \text{If}\;\; b^2-4ac=0 & \text{one real root}\;\; y=c_1e^{mx}+c_2xe^{mx}
@@ -278,7 +278,7 @@ $\begin{cases}
 \subsection{Undetermined Coefficients - Superposition Approach}
 $\bullet$ Nonhomogeneous Linear DE with constant coefficients:
 $$ay''+by'+cy=g(x)$$
-\textbf{Recall from Section 4.1}: The general solution is: $$y(x)=y_c(x)+y_p(x)$$ where $y_c(x)$ is the general solution $ay''+by'+cy=0$\\ $y_p(x)$ is one particular colution of $ay''+by'+cy=g(x)$
+\textbf{Recall from Section 4.1}: The general solution is: $$y(x)=y_c(x)+y_p(x)$$ where $y_c(x)$ is the general solution $ay''+by'+cy=0$\\ $y_p(x)$ is one particular solution of $ay''+by'+cy=g(x)$
 \\\textbf{The big question:} How do we find $y_p(x)$?
 \subsubsection{Trial Particular Solutions} 
 \begin{tabular}{|c|c|}
@@ -321,7 +321,7 @@ $u_2'=\frac{\begin{bmatrix}\cos 3x & 0 \\ -3\sin 3x & \cos 3x\end{bmatrix}}{\beg
 \section{Applications of 2nd-Order DE}
 \subsection{Simple Harmonic Motion}
 $\frac{d^2x}{dt^2}+\omega ^2s=0$ where $\omega = \sqrt{\frac{k}{m}}$
-\\Auxilliary Equation: $m^2\omega ^2=0 \quad m=0\pm\beta i$
+\\Auxiliary Equation: $m^2\omega ^2=0 \quad m=0\pm\beta i$
 \\$C_1cos \omega t + C_3 \sin \omega t = A\sin (\omega t + \phi)$ where $A=\sqrt{C_1^2+C_2^2},\;\; \sin\phi=\frac{C_2}{A},\;\; \cos\phi=\frac{C_2}{A},\;\;\tan\phi=\frac{C_1}{C_2}$
 \subsubsection{Example}
 A 16lb weight is attached to a spring, stretching it 1.28 feet. This weight is released 2 feet above the equilibrium position, with initial downward velocity of 1.5 ft/s
@@ -371,13 +371,13 @@ Differential Equations of the form:
 $$a_nx^ny^{(n)}+a_{n-1}x^{n-1}y^{(n-1)}+...+a_1xy'+a_0y=g(x)$$
 \\These are considered equidimensional, where the degree of each monomial coefficient function equals the order of the derivative of y in each term
 
-\subsubsection{General Formula for the Auxilliary Equation}
+\subsubsection{General Formula for the Auxiliary Equation}
 $am(m-1)+bm+c=0$ is equivalent to $am^2+(b-a)m+c=0$
-\subsubsection{Steps to solving for an auxilliary equation}
+\subsubsection{Steps to solving for an auxiliary equation}
 \begin{enumerate}
     \item Consider $y=x^r,~y'=rx^{r-1},~y''=r(r-1)x^{r-2}$ etc.
     \item Plug that in for each $y$ and its derivatives, simplify the $x^r$ terms
-    \item Factor out $x^r$ and thats your equation
+    \item Factor out $x^r$ and that's your equation
 \end{enumerate}
 \subsubsection{Forms of Solutions}
 $\begin{cases}
@@ -389,7 +389,7 @@ $\begin{cases}
 Solve $x^2y''+4xy'-4y=0$
 \\Assume $y=x^m \Rightarrow -4y=-4x^m\\y'=mx^{m-1} \Rightarrow 4xy'=4mx^m\\y''=m(m-1)x^{m-2} \Rightarrow x^m
 \\x^2y''+4xy'-4y=m(m-1)x^m+4mx^m-4x^m \Rightarrow  [m(m-1)+4m-4]x^m=0
-\\m^2-m+4m-4=0$ is the auxilliary equation $m=1,\;\;-4 \Rightarrow y_1=x',\;\;y_2=x^{-4}
+\\m^2-m+4m-4=0$ is the auxiliary equation $m=1,\;\;-4 \Rightarrow y_1=x',\;\;y_2=x^{-4}
 \\y=C_1x+C_2x^{-4}$
 \subsubsection{Example Case 2}
 $$9x^2y''+3xy'+y=0 \Rightarrow a=9,~b=3,~c=1 \Rightarrow  (3m-1)^2 \Rightarrow m=\frac{1}{3}$$
@@ -611,7 +611,7 @@ Compound C is formed as a reaction of A and B $A+B\rightarrow C$. The resulting 
 \\x(t)=\frac{100(e^{140kt}-1)}{\frac{15}{8}e^{140kt}-1}$ where $k =\frac{1}{1400}\ln \frac{32}{25}
 \\x(15)=26.12705$ grams of $C$
 \\$\lim_{t\rightarrow\infty}\frac{100(e^{140kt}-1)}{\frac{15}{8}e^{140kt}-1} = \frac{160}{3}$ grams of $C$
-\subsection{Find the auxilliary equation for the DE}
+\subsection{Find the auxiliary equation for the DE}
 $3y''+5y'-2y=0
 \\3m^2+5m-2=0$
 \subsection{$3m^2+5m-2=0$}
@@ -624,7 +624,7 @@ $m^2+4m+4=0
 \\y=c_1e^{-2x}+c_2xe^{-2x}$
 \subsection{$y''-2y'-3y=-6x^2+x-2$}
 \textbf{Find} $y_c$\\
-$y''-2y'-3y=0$ gets an auxilliary equation
+$y''-2y'-3y=0$ gets an auxiliary equation
 \\$m^2-2m-3=0 \Rightarrow (m+1)(m-3)=0 \Rightarrow m_2=-1,\;\; m_2=-3\\y_2=c_1e^{-x}+c_2e^{3x}$
 \\\textbf{Find} $y_p$\\
 $y_p(x)=Ax^2+Bx+C \\ y_p'(x)=2Ax+B \\ y_p''(x)=2A$
