@@ -37,7 +37,7 @@
 \maketitle
 \tableofcontents
 \pagebreak
-\section{Chapter 1}
+\section{Introduction to Differential Equations}
 \subsection{Terminology}
 \textbf{Definition} A differential equation is an equation containing the derivatives or differentials 
 of one or more dependent variables, with respect to one or more independent variables.\\
@@ -504,30 +504,12 @@ $\mathcal{L}\left\{e^{-3t}t^4\right\} = \mathcal{L}\left\{t^4\right\}_{s\to s+3}
 Defined as: $\mathcal{U}(t-a)\begin{cases}
     0 & 0 \leq t < a
     \\ 1 & t \geq a
-\end{cases}$, the $t$ value at which the argument is equal to 0 is where the jump happens
+\end{cases}$, jump occurs at $t$ value where the argument equals zero
 \\$\mathcal{U}(t-a)$: \begin{tikzpicture}[>=stealth,scale=1.0, baseline={(current bounding box.center)}]
-    \draw[->] (-0.5,0) -- (4.5,0) node[right] {\(t\)};
-    \draw[->] (0,-0.5) -- (0,1.5) node[above] {\(y\)};
-    \draw[dashed] (2,-0.5) -- (2,1.5);
-    \draw[thick,red] (0,0) -- (2,0);
-    \draw[thick,red] (2,1) -- (4,1);
-    \draw[fill=white,draw=red,thick] (2,0) circle (2pt);
-    \draw[fill=red,draw=red] (2,1) circle (2pt);
-    \node[below] at (2,0) {\(a\)};
-    \node[left]  at (0,1) {\(1\)};
-    \node[right] at (4,1) {\(\mathcal{U}(t-a)\)};
+    \draw[->] (-0.5,0) -- (4.5,0) node[right] {\(t\)};\draw[->] (0,-0.5) -- (0,1.5) node[above] {\(y\)};\draw[dashed] (2,-0.5) -- (2,1.5);\draw[thick,red] (0,0) -- (2,0);\draw[thick,red] (2,1) -- (4,1);\draw[fill=white,draw=red,thick] (2,0) circle (2pt);\draw[fill=red,draw=red] (2,1) circle (2pt);\node[below] at (2,0) {\(a\)};\node[left]  at (0,1) {\(1\)};\node[right] at (4,1) {\(\mathcal{U}(t-a)\)};
 \end{tikzpicture}
 \\$k\mathcal{U}(t-a)$: \begin{tikzpicture}[>=stealth,scale=1.0, baseline={(current bounding box.center)}]
-    \draw[->] (-0.5,0) -- (4.5,0) node[right] {\(t\)};
-    \draw[->] (0,-0.5) -- (0,2.5) node[above] {\(y\)};
-    \draw[dashed] (2,-0.5) -- (2,2.5);
-    \draw[thick,orange] (0,0) -- (2,0);
-    \draw[thick,orange] (2,2) -- (4,2);
-    \draw[fill=white,draw=orange,thick] (2,0) circle (2pt);
-    \draw[fill=orange,draw=orange] (2,2) circle (2pt);
-    \node[below] at (2,0) {\(a\)};
-    \node[left]  at (0,2) {\(k\)};
-    \node[right] at (4,2) {\(k\,\mathcal{U}(t-a)\)};
+    \draw[->] (-0.5,0) -- (4.5,0) node[right] {\(t\)};\draw[->] (0,-0.5) -- (0,2.5) node[above] {\(y\)};\draw[dashed] (2,-0.5) -- (2,2.5);\draw[thick,orange] (0,0) -- (2,0);\draw[thick,orange] (2,2) -- (4,2);\draw[fill=white,draw=orange,thick] (2,0) circle (2pt);\draw[fill=orange,draw=orange] (2,2) circle (2pt); \node[below] at (2,0) {\(a\)}; \node[left]  at (0,2) {\(k\)}; \node[right] at (4,2) {\(k\,\mathcal{U}(t-a)\)};
 \end{tikzpicture}
 \subsubsection{Differentiation: Derivatives of Transforms}
 $\mathcal{L}\left\{t^nf(t)\right\}=(-1)^n\frac{d^n}{ds^n}\mathcal{L}\left\{f(t)\right\}=(-1)^n\frac{d^n}{ds^n}F(s)$
@@ -536,6 +518,43 @@ $\mathcal{L}\left\{te^{at}\right\}=\frac{d}{ds}\mathcal{L}\left\{e^{at}\right\}=
 \\$\mathcal{L}\left\{t^2 \cos kt\right\}= \frac{d^2}{ds^2}\mathcal{L}\left\{\cos kt\right\}=-\frac{d}{ds}\left[\frac{s^2-k^2}{(s^2+k^2)^3}\right]=  \frac{2s(3^2-3k^2)}{(s^2+k^2)^3}$
 \\$\mathcal{L}\left\{te^{at}\sin kt \right\} =-\frac{d}{ds}\left[\mathcal{L}\left\{e^{at} \sin kt\right\}\right]=
 -\frac{d}{ds}\left[\mathcal{L}\left\{\sin kt\right\}\right]_{s\to (s-a)}=-\frac{d}{ds}\left[k(s^2+k^2)^{-1}\right]_{s\to (s-a)}\\ = -k (-1)(s^2+k^2)^{-2}\cdot 2s |_{s\to (s-a)}=\frac{2ks}{(s^2+k^2)^2|_{s\to (s-a)}}=$\boxed{\frac{2k(s-a)}{\left[(s-a)^2+k^2\right]^2}}
+
+\subsection{Transformations of Derivatives, Integrals, \& Periodic Functions}
+\subsubsection{Formulae}
+$\mathcal{L}\left\{f'(t)\right\}=s\mathcal{L}\left\{f(t)\right\}-f(0) \Rightarrow \mathcal{L}\left\{f'(t)\right\}=  sF(s)-f(0)$
+\\$\mathcal{L}\left\{f''(t)\right\}=s(sF(s)-f(0))-f'(0) \Rightarrow \mathcal{L}\left\{f''(t)\right\}=s^2F(s)-sf(0)-f'(0) $
+\\$\mathcal{L}\left\{f'''(t)\right\}=s^3F(s)-s^2f(0)-sf'(0)-f''(0)$
+\\\subsubsection{General solution:} $\mathcal{L}\left\{f^{(n)}(t)\right\}=s^nF(s)-\sum_{k=0}^{n-1}s^{n-1-k}f^{(k)}(0)=s^nF(s)-s^{n-1}f(0)-s^{n-2}f'(0)\dots \cancelto{1}{s^0}f^{(n-1)}(0)$
+\subsubsection{Convolution}
+Let $f,g$ be piecewise confinuous on $[0,\infty)$. The convolution of $f$ and $g$ is defined as: $$(f*g)(t)=\int_{0}^{t}f(\tau)g(t-\tau)d\tau$$
+And $(f*g)(t)=(g*f)(t)$
+\subsubsection{Example}
+\paragraph{1:} Use the fact that $\frac{d}{dt}\left[t\cos kt\right]= -kt\sin kt + \cos kt$ to find $\mathcal{L}\left\{-kt\sin kt + \cos kt\right\}$
+\\$\mathcal{L}\left\{\frac{d}{dt}\left[t\cos kt\right]\right\}=\mathcal{L}\left\{f'(t)\right\}=s\mathcal{L}\left\{f(t)\right\}-\cancelto{0}{f(0)}=s\mathcal{L}\left\{t\cos kt\right\}=$\boxed{\frac{s(s^2-k^2)}{(s^2+k^2)^2}}
+\\\paragraph{2:} Let $f(t)=e^t$ and $g(t)=\cos t$. Find $(f*g)(t)$
+\\$(f*g)(t)=\int_{0}^{t}e^\tau \cos (t-\tau)d\tau=-e^\tau\sin(t-\tau)|_{0}^{t}+\int_{0}^{t}e^\tau\sin(t-\tau)d\tau$
+\\$(f*g)(t)=\sin t+\left[e^\tau \cos (t-\tau)\right]_{\tau=0}^{\tau=t}-\cancelto{(f*g)(t)}{\int_{0}^{t}e^\tau \cos (t-\tau)d\tau}$
+\\$2(f*g)(t)=\sin t-\cos t + e^t \Rightarrow$ \boxed{(f*g)(t)=\frac{\sin t-\cos t + e^t}{2}}
+\subsubsection{Convolution Theorem}
+$\left\{(f*g)(t)\right\}=\mathcal{L}\left\{f(t)\right\}\mathcal{L}\left\{g(t)\right\}=F(s)G(s)$
+\subsubsection{Corollary}
+$\mathcal{L}\left\{\int_{0}^{t}f(\tau) dt\right\}=\frac{F(s)}{s}$
+\subsubsection{Transform of a Periodic Function}
+\paragraph{Definition} A periodic function is a function that repeats itself every period $T$. In other words, $f$ is periodic if and only if there exists $T>0$ such that $$f(t+T)=f(t)$$
+\paragraph{Theorem} Let $f(t)$ be piecewise continuous on $[0,\infty)$, of exponential order, and periodic with period $T$. Then $$\mathcal{L}\left\{f(t)\right\}=\frac{1}{1-e^{-sT}}\int_{0}^{T}e^{-st}f(t)dt$$
+\subsubsection{Examples}
+\paragraph{1: }$\mathcal{L}\left\{\int_{0}^{t}e^\tau \cos (t-\tau)d\tau\right\} = \mathcal{L}\left\{e^t\cos t\right\}= \mathcal{L}\left\{e^t\right\}\cdot \mathcal{L}\left\{\cos t\right\} = \frac{1}{s-1} \cdot \frac{s}{s^2+1} = \frac{s}{(s-1)(s^2+1)}$
+\\\paragraph{2: }$\mathcal{L}^{-1}\left\{\frac{1}{(s-3)(s+1)}\right\}=\mathcal{L}^{-1}\left\{\frac{1}{s-3}\frac{1}{s+1}\right\}=\mathcal{L}^{-1}\left\{\frac{1}{s-3}\right\}\mathcal{L}^{-1}\left\{\frac{1}{s+1}\right\}=e^{3t}*e^{-t}\\=\int_{0}^{t}e^{3\tau}e^{-(t-\tau)}d\tau=e^{-t}\int_{0}^{t}e^{4\tau}d\tau = \frac{e^{3t}-e^{-t}}{4}$
+\\\paragraph{3: }$\mathcal{L}^{-1}\left\{\frac{1}{(s^2+k^2)^2}\right\}=\frac{1}{k^2}\mathcal{L}^{-1}\left\{\frac{k}{s^2+k^2}\frac{k}{s^2+k^2}\right\}=\frac{1}{k^2}(\sin kt * \sin kt)=\frac{1}{k^2}\int_{0}^{t}{\sin k\tau \sin k(t-\tau)d\tau}\\=\frac{1}{2k^2}\int_{0}^{t}\left[\cos (2k\tau-kt)-\cos kt \right]d\tau = \frac{1}{2k^2}\left(\frac{\sin kt}{k}-t\cos kt\right) = \frac{\sin kt - kt\cos kt }{2k^3}$
+\\\paragraph{4: }Find the Laplace Tranform of the sawtooth function with period $b$ and amplitude $a$ \\On $[0,b]$, $f(t)=\frac{a}{b}$, $f(t+b)=f(t)$
+\\$\mathcal{L}\left\{f(t)\right\}=\frac{1}{1-e^{-sb}}\int_{0}^{b}e^{-st}\frac{a}{b}tdt=\frac{a}{b(1-e^{-sb})}\int_{0}^{b}te^{-st}dt=\frac{-a(-sbe^{-sb}+(1-e^{-sb}))}{bs^2(1-e^{-sb})}=\frac{a}{s^2}\left(\frac{1}{bs}-\frac{1}{e^{bs}-1}\right)$
+
+\subsection{Applications}
+
+
+
+
+
 
 
 
